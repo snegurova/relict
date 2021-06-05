@@ -1,0 +1,294 @@
+.header {
+  border-bottom: solid 1px #d9d9d9;
+  z-index: 10;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 117px;
+    @media screen and (max-width: 560px) {
+      min-height: 65px;
+    }
+  }
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    transition: filter 0.3s;
+  }
+  &__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 53px;
+  }
+  .logo {
+    display: block;
+  }
+  &__nav {
+    padding-top: 7px;
+    @media screen and (max-width: 860px) {
+      display: none;
+    }
+  }
+  &__nav-mobile {
+    margin-top: 22px;
+    display: none;
+    @media screen and (max-width: 860px) {
+      display: block;
+    }
+    @media screen and (max-width: 680px) {
+      margin-top: 16px;
+    }
+  }
+  .header__nav-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 0 0 78px;
+    padding: 0;
+    a {
+      position: relative;
+      text-decoration: none;
+      color: $main-font-color;
+      font-weight: 600;
+      transition: color 0.5s;
+      margin-right: 30px;
+      &:hover {
+        color: $active-nav-color;
+        transition: color 0.5s;
+      }
+      &.active {
+        color: $active-nav-color;
+      }
+    }
+  }
+  .profile {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-image: url("../img/profile-icon.svg");
+    background-size: contain;
+    z-index: 5;
+    @media screen and (max-width: 560px) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .burger-menu {
+    &__body {
+      position: fixed;
+      top: 118px;
+      right: -120%;
+      width: 35%;
+      min-width: 302px;
+      max-width: 760px;
+      height: calc(100% - 118px);
+      background-color: $background-color;
+      transition: right 0.5s ease 0s;
+      overflow: auto;
+      z-index: 4;
+      padding: 54px 0 0;
+      @media screen and (max-width: 1919px) {
+        padding: 50px 0 0;
+      }
+      @media screen and (max-width: 1280px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 992px) {
+        width: 70%;
+      }
+      @media screen and (max-width: 680px) {
+        //padding: 46px 18px 39px 18px;
+        padding: 46px 0 0;
+        height: calc(100% - 66px);
+      }
+
+
+      @media screen and (max-width: 560px) {
+        right: -160%;
+        width: 100%;
+        top: 66px;
+
+      }
+      .social-list {
+        padding: 0 18px 62px 115px;
+        @media screen and (max-width: 1919px) {
+          padding: 0 18px 62px 80px;
+        }
+        @media screen and (max-width: 680px) {
+          padding: 0 18px 62px;
+        }
+      }
+    }
+    &__list {
+      list-style: none;
+      padding: 0 18px 0 115px;
+      @media screen and (max-width: 1919px) {
+        padding: 0 18px 0 80px;
+      }
+      @media screen and (max-width: 680px) {
+        padding: 0 18px;
+      }
+      li:not(:first-child) {
+        margin-top: 24px;
+        @media screen and (max-width: 1919px) {
+          margin-top: 20px;
+        }
+        @media screen and (max-width: 680px) {
+          margin-top: 16px;
+        }
+      }
+      a {
+        position: relative;
+        text-decoration: none;
+        color: $main-font-color;
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 0.9;
+        transition: color 0.5s;
+        letter-spacing: -0.830409px;
+        &:hover {
+          color: $accent-color;
+          transition: color 0.5s;
+        }
+        &.active {
+          color: $accent-color;
+        }
+        @media screen and (max-width: 1919px) {
+          font-size: 2rem;
+        }
+        @media screen and (max-width: 680px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  .burger-menu__icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 16px;
+    cursor: pointer;
+    margin-left: 52px;
+    @media screen and (max-width: 560px) {
+      //width: 19px;
+      //height: 12px;
+      margin-left: 21px;
+    }
+  }
+  .burger-menu__icon span,
+  .burger-menu__icon::before,
+  .burger-menu__icon::after {
+    left: 0;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: $main-font-color;
+  }
+  .burger-menu__icon::before,
+  .burger-menu__icon::after {
+    content: "";
+  }
+  .burger-menu__icon::before {
+    top: 0;
+    width: 60%;
+    left: 40%;
+  }
+  .burger-menu__icon::after {
+    bottom: 0;
+  }
+  .burger-menu__icon span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+
+  .burger-menu__icon._active span {
+    transform: scale(0) translate(0px, -50%);
+  }
+  .burger-menu__icon._active::before {
+    top: 50%;
+    width: 100%;
+    left: 0;
+    transform: rotate(-45deg) translate(0px, -50%);
+  }
+  .burger-menu__icon._active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
+  }
+  .burger-menu__body._active {
+    right: 0;
+    &~.burger-menu__overlay {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 1s;
+    }
+  }
+  .burger-menu__overlay {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s, visibility 0s 1s;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 118px;
+    left: 0;
+    background-color: rgba(17, 24, 39, 0.5);
+    z-index: 3;
+    @media screen and (max-width: 560px) {
+      top: 66px;
+    }
+  }
+  .persons {
+    background-color: #F2F3F5;
+    padding: 82px 18px 50px 115px;
+    @media screen and (max-width: 1919px) {
+      margin-top: 45px;
+      padding: 82px 18px 50px 80px;
+    }
+    @media screen and (max-width: 680px) {
+      margin-top: 0;
+      padding: 42px 18px 50px;
+    }
+  }
+  .person {
+    padding-top: 40px;
+    padding-bottom: 34px;
+
+    &:not(:last-child) {
+      border-bottom: solid 1px #D1D1D1;
+    }
+    h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    p {
+      color: #727272;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+    a {
+      color: $main-font-color;
+      font-size: 1rem;
+      text-decoration: underline;
+      transition: color 0.5s;
+      &:hover {
+        color: #727272;
+      }
+    }
+  }
+}
+
+._lock {
+  overflow: hidden;
+}
+
+._filter {
+  filter: blur(2px);
+}

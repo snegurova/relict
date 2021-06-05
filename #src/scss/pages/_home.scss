@@ -1,0 +1,128 @@
+.home {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .header {
+    flex: 0 1 auto;
+  }
+  .main {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.heading {
+  padding: 50px 0 0 0;
+  align-self: flex-start;
+  @media screen and (max-width: 1919px) {
+    padding: 0;
+  }
+  &__wrapper {
+    display: block;
+    max-width: 1059px;
+  }
+  h1 {
+    font-size: 4.5rem;
+    line-height: 1.2;
+    @media screen and (max-width: 1919px) {
+      font-size: 3.5rem;
+    }
+    @media screen and (max-width: 1600px) {
+      font-size: 2.5rem;
+    }
+    @media screen and (max-width: 1366px) {
+      font-size: 2rem;
+    }
+    @media screen and (max-width: 780px) {
+      font-size: 1.8rem;
+    }
+    @media screen and (max-width: 560px) {
+      font-size: 1.65rem;
+    }
+  }
+}
+.last-news {
+  padding: 0;
+  @media screen and (max-width: 560px) {
+    padding: 26px 0 0 0;
+  }
+  &__heading {
+    margin: 0;
+    text-decoration: underline;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $main-font-color;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__slide {
+    background-color: $background-color;
+  }
+  &__slide-inner {
+    max-width: 413px;
+  }
+}
+
+.projects {
+  padding: 0;
+  @media screen and (max-width: 560px) {
+    padding-top: 30px;
+  }
+  &__heading-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 33px;
+    @media screen and (max-width: 560px) {
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__heading {
+    font-size: 1.125rem;
+    color: $slider-heading-color;
+    font-weight: 600;
+    @media screen and (max-width: 560px) {
+      margin: 0;
+    }
+    &-left-col {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media screen and (max-width: 560px) {
+       width: 100%;
+      }
+    }
+  }
+  &__controls {
+    @media screen and (max-width: 560px) {
+      position: absolute;
+      right: 16px;
+      top: calc(50% - 38px);
+    }
+  }
+  &__link {
+    color: $main-font-color;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.3s;
+    margin-right: 108px;
+    &:hover {
+      color: $active-nav-color;
+      transition: color 0.3s;
+    }
+    @media screen and (max-width: 560px) {
+      margin-top: 10px;
+    }
+  }
+}

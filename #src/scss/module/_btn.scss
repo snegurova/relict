@@ -1,0 +1,87 @@
+.btn {
+  display: block;
+  border-radius: 50%;
+  background-color: $accent-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  &_submit {
+    width: 48px;
+    height: 48px;
+    background-image: url("../img/arrow-btn-submit.svg");
+    font-size: 0;
+    transition: background-position 0.3s ease-in;
+    &:hover {
+      background-position: 22px;
+    }
+  }
+}
+.btn.btn_submit {
+  margin-right: 18px;
+}
+.btn-icon-text {
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+  border: none;
+  background-color: $background-color;
+  &:hover {
+    cursor: pointer;
+  }
+  @media screen and (max-width: 560px) {
+    flex-wrap: wrap;
+  }
+}
+
+.contacts {
+  .btn_submit {
+    width: 58px;
+    height: 58px;
+    background-size: 30%;
+
+  }
+}
+
+.contact-us__form {
+  .btn_submit {
+    background-image: url("../img/carbon_send.svg");
+    &:hover {
+      background-position: center;
+    }
+  }
+}
+
+.btn-with-icon {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 28px 7px 9px;
+  border-radius: 40px;
+  background-color: $accent-color;
+  color: $label-color;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.7s;
+  &:hover {
+    background-color: $background-color;
+    color: $main-font-color;
+    path {
+      fill: $label-bg-color;
+    }
+  }
+  &__icon-wrapper {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 17px;
+  }
+}
+.donate-submit-amount {
+  margin-left: 18px;
+}

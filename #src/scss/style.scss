@@ -1,0 +1,94 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@import "variables_";
+@import "typography";
+@import './module/effect-fade';
+@import "./module/header";
+//@import "./module/scroll-down";
+@import "./module/sliders";
+@import "./module/pagination";
+@import "./module/forms";
+@import "./module/radio";
+@import "./module/footer";
+@import "./pages/home";
+@import "./pages/contacts";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+}
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	&._loaded {
+	}
+}
+.main {
+	flex: 1 1 auto;
+	margin-top: 118px;
+	transition: filter 0.3s;
+	@media screen and (max-width: 560px) {
+		margin-top: 66px;
+	}
+}
+.container {
+	width: 1280px;
+	margin: 0 auto;
+	&_horizontal {
+		//display: flex;
+	}
+	@media screen and (max-width: 1340px) {
+		padding-left: 30px;
+		padding-right: 30px;
+		width: 100%;
+	}
+	@media screen and (max-width: 780px) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+
+._relative {
+	position: relative;
+}
+
+.content-container {
+		max-width: 848px;
+	&_centered {
+		margin: 0 auto;
+	}
+}
+
+.full-width-img {
+	width: 100%;
+	display: block;
+}
+
+img {
+	max-width: 100%;
+}
+
+.pt-45 {
+	padding-top: 45px;
+}
+.mt-45 {
+	margin-top: 45px;
+}
+.mt-60 {
+	margin-top: 60px;
+}

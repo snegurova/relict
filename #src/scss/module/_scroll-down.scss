@@ -1,0 +1,19 @@
+.scroll-down-link {
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+  align-items: center;
+  color: $secondary-font-color-light;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &__btn.btn {
+    width: 52px;
+    height: 52px;
+    background-image: url("../img/arrow-btn-scroll-down.svg");
+    margin-right: 21px;
+    background-color: transparent !important;
+    border: 1px solid $secondary-font-color-light !important;
+  }
+}
