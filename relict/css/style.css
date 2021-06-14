@@ -2190,7 +2190,7 @@ textarea {
 }
 
 .ad-products__slider {
-  padding-bottom: 30px;
+  padding: 0 5px 30px;
 }
 
 .ad-products__slider .swiper-pagination {
