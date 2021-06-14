@@ -1,12 +1,10 @@
-@@include('libs/smoothScroll.js', {})
-@@include('libs/tippy.js', {})
+
 @@include('libs/inputmask.min.js', {})
 @@include('functions.js', {})
 @@include('sliders.js', {})
 @@include('scroll.js', {})
 @@include('forms.js', {})
 @@include('radio.js', {})
-// @@include('tippies.js', {})
 @@include('dynamicAdapt.js', {})
 
 function testWebP(callback) {

@@ -1,149 +1,41 @@
 <header class="header _lp">
-    <div class="container header__wrapper">
-        <div class="header__right">
-            <a href="/"><img src="./img/logo.svg" alt="logo" class="logo"></a>
-            <nav class="header__nav">
-                <ul class="header__nav-list">
-                    <li><a href="/about-us.html">Про нас</a></li>
-                    <li><a href="/news.html">Новини <span class="label">4</span></a></li>
-                    <li><a href="/shop.html">Магазин</a></li>
-                    <li><a href="/contacts.html" class="active">Контакти</a></li>
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__blur"></div>
+      <a href="/"><img src="./img/logo.svg" alt="logo" class="logo"></a>
+      <div class="header__menu menu">
+        <div class="burger-menu__icon">
+          <span></span>
+        </div>
+        <div class="menu__body">
+          <nav class="header__nav">
+            <ul class="header__nav-list _spollers ">
+              <li class="active"><a href="/" class="menu__link">Home</a></li>
+              <li class="menu__sub-menu">
+                <a href="/solution.html" class="menu__link">Solution</a>
+                <span class="menu__arrow _spoller"></span>
+                <ul class="menu__sub-list">
+                  <li>
+                    <a href="" class="menu__sub-link">Ad Products</a>
+                  </li>
+                  <li>
+                    <a href="" class="menu__sub-link">Services</a>
+                  </li>
                 </ul>
-            </nav>
+              </li>
+              <li><a href="/blog.html" class="menu__link">Blog</a></li>
+              <li><a href="/contact-us.html" class="menu__link">Contact us</a></li>
+            </ul>
+            <!--        <div class="burger-menu__overlay"></div>-->
+  
+          </nav>
+          <div class="header__right">
+            <button class="btn_log-in">Log In</button>
+            <button class="btn btn_secondary">Sign up</button>
+          </div>
         </div>
-        <div class="header__left">
-            <a href="/signup.html" class="profile"></a>
-            <div role="dialog" tabindex="0" class="cart" aria-labelledby="Cart menu"><span class="label">2</span></div>
-            <div role="dialog" tabindex="0" class="burger-menu" aria-labelledby="Burger menu">
-                <div class="burger-menu__icon">
-                    <span></span>
-                </div>
-                <div class="burger-menu__body">
-                    <ul class="burger-menu__list">
-                        <li><a class="active" href="/donate.html">Донат</a></li>
-                        <li><a class="active" href="/donate-subscribtion.html">Підписка</a></li>
-                        <li><a href="/projects.html">Спецпроекти <span class="label">4</span></a></li>
-                        <li><a href="/calendar.html">Події <span class="label">2</span></a></li>
-                        <li><a href="/get-involved.html">Долучитись</a></li>
-                        <li><a href="/materials.html">Освітні матеріали</a></li>
-                        <li><a href="/reports.html">Результати і звіти</a></li>
-                        <li><a href="/march.html">#Марш за тварин</a></li>
-                        <div class="header__nav-mobile">
-                            <li><a href="/about-us.html">Про нас</a></li>
-                            <li><a href="/news.html">Новини <span class="label">4</span></a></li>
-                            <li><a href="/shop.html">Магазин</a></li>
-                            <li><a href="/contacts.html" class="active">Контакти</a></li>
-                        </div>
-                    </ul>
-<!--                    @@include('_social-icons.html',{})-->
-                    <div class="persons">
-                        <div class="person">
-                            <h2>Олександр Тодорчук</h2>
-                            <p>Засновник гуманістичного руху UAnimals</p>
-                            <a href="mailto:info@uanimals.org" class="person__email">info@uanimals.org</a>
-                        </div>
-                        <div class="person">
-                            <h2>Ольга Чевганюк</h2>
-                            <p>співзасновниця ГО Юаенімалс</p>
-                            <a href="mailto:olga@uanimals.org" class="person__email">olga@uanimals.org</a>
-                        </div>
-                        <div class="person">
-                            <h2>Юстина Дусан</h2>
-                            <p>координатор програми “Україна без фотопослуг з тваринами”</p>
-                            <a href="mailto:Dusyna@gmail.com" class="person__email">Dusyna@gmail.com</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="burger-menu__overlay"></div>
-                <div class="cart__body">
-                    
-                    <div class="cart__header"></div>
-                    <div class="cart__main">
-                        <div class="translucent"></div>
-                        <div tabindex="0" class="back-btn close-cart">Сгорнути</div>
-                        <div class="cart__products">
-                            <div class="cart__product">
-                                <div class="cart__remove"></div>
-                                <div class="cart__product-left">
-                                    <img src="./img/cart-1.jpg" alt="Футболка">
-                                </div>
-                                <div class="cart__product-right">
-                                  <h2 class="product__title">
-                                    Монолыжа Plastkon OneFoot Miniski Черная с красным еще
-                                  </h2>
-                                  <div class="product__options-wrapper">
-                                    <div class="product__option">
-                                      <div class="product__option-title">Розмір:</div>
-                                      <div class="product__option-value">s/m</div>
-                                    </div>
-                                    <div class="product__option">
-                                      <div class="product__option-title">Колір:</div>
-                                      <div class="product__option-color"
-                                           style="background-color: #151515;">
-                                        Чорний
-                                      </div>
-                                    </div>
-                                    <div class="product__option">
-                                      <div class="product__option-title">Кількість:</div>
-                                      <div class="quantity">
-                                        <div class="quantity__button quantity__button_minus"></div>
-                                        <div class="quantity__input">
-                                          <input autocomplete="off" type="text" name="quantity" value="1">
-                                        </div>
-                                        <div class="quantity__button quantity__button_plus"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="product__price">2 315₴</div>
-                                </div>
-                            </div>
-                            <div class="cart__product">
-                                <div class="cart__remove"></div>
-                                <div class="cart__product-left">
-                                    <img src="./img/cart-2.jpg" alt="Футболка">
-                                </div>
-                                <div class="cart__product-right">
-                                  <h2 class="product__title">
-                                    Монолыжа Plastkon OneFoot Miniski Черная с красным еще
-                                  </h2>
-                                  <div class="product__options-wrapper">
-                                    <div class="product__option">
-                                      <div class="product__option-title">Розмір:</div>
-                                      <div class="product__option-value">s/m</div>
-                                    </div>
-                                    <div class="product__option">
-                                      <div class="product__option-title">Колір:</div>
-                                      <div class="product__option-color"
-                                           style="background-color: #fff;">
-                                        Чорний
-                                      </div>
-                                    </div>
-                                    <div class="product__option">
-                                      <div class="product__option-title">Кількість:</div>
-                                      <div class="quantity">
-                                        <div class="quantity__button quantity__button_minus"></div>
-                                        <div class="quantity__input">
-                                          <input autocomplete="off" type="text" name="quantity" value="1">
-                                        </div>
-                                        <div class="quantity__button quantity__button_plus"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="product__price">2 315₴</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart__checkout-wrapper">
-                            <a href="/checkout.html" class="btn product__btn">Оформити</a>
-                            <div class="price-wrapper product__option">
-                                <div class="product__option-title">До сплати:</div>
-                                <div class="product__price">2 315₴</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart__overlay"></div>
-            </div>
-        </div>
+      </div>
+      
     </div>
+  </div>
 </header>

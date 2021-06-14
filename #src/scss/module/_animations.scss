@@ -1,0 +1,10 @@
+.animated_fade-up {
+  transform: translate(0px, 150px);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+
+.animated_fade-up._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}

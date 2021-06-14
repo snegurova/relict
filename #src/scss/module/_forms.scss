@@ -13,15 +13,14 @@ textarea {
 .input-form {
   &__wrapper {
     position: relative;
+    width: 100%;
+    margin-top: 20px;
   }
 
   &__label {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    transition: all 0.5s;
-    color: #868686;
-    font-size: 1rem;
+    color: #434A52;
+    font-size: 1.125rem;
+    padding-left: 20px;
   }
 }
 
@@ -30,24 +29,31 @@ textarea {
   max-width: 100%;
   display: block;
   border: none;
-  border-bottom: 1px solid #8D8D8D;
-  padding: 10px;
+  border-radius: 19px;
+  padding: 18px 20px;
   color: $main-font-color;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Dosis', sans-serif;
   font-size: 1rem;
   font-weight: 500;
-
+  background-color: #f7f8fc;
+  border: 1px solid #f7f8fc;
+  transition: all 0.3s ease;
   &::placeholder {
-    color: #868686;
-    font-size: 0.875rem;
+    color: #8d99a6;
+    font-size: 1.125rem;
   }
-
+  &:focus-visible {
+    outline: none;
+  }
+  &.focus-visible {
+    border: 1px solid $primary-btn-color;
+  }
   &_full-width {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 8px;
 
     &::placeholder {
-      font-size: 1rem;
+      font-size: 1.125rem;
     }
   }
 
@@ -157,20 +163,36 @@ textarea {
 }
 
 //<SELECT (sel+tab)>====================================================================================================
+
+
 .select {
   position: relative;
   line-height: 1;
+  max-width: 100%;
+  display: block;
+  border: none;
+  border-radius: 19px;
+  color: #030F29;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #f7f8fc;
+  border: 1px solid #f7f8fc;
+  transition: all 0.3s ease;
+  margin-top: 8px;
   // .select__item
   &__item {
     position: relative;
+    color: #8d99a6;
+    font-size: 1.125rem;
+    padding: 18px 20px;
   }
 
   // .select__title
   &__title {
-    color: #000;
+    color: #8d99a6;
     cursor: pointer;
     @media (max-width: 780px) {
-      font-size: 0.875rem;
     }
   }
 
@@ -183,7 +205,7 @@ textarea {
     flex-direction: row-reverse;
 
     span {
-      height: 1em;
+      height: 1.25rem;
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 1;
@@ -194,9 +216,10 @@ textarea {
       content: "";
       display: inline-block;
       transition: all 0.3s ease 0s;
-      width: 6px;
-      height: 10px;
-      background: url("../img/select.svg") center no-repeat;
+      width: 32px;
+      height: 27px;
+      border-radius: 9px;
+      background: url("../img/select.svg") center no-repeat, linear-gradient(to right, #0E0E12, #0E0E12);
     }
   }
 
@@ -211,37 +234,36 @@ textarea {
     color: #000;
     display: none;
     position: absolute;
-    top: 45px;
-    left: -19px;
-    border-radius: 0 0 4px 4px;
-    width: 200px;
-    background-color: #fff;
+    top: 68px;
+    left: 0;
+    border-radius: 19px;
+    width: 100%;
+    background-color: #F7F8FB;
     padding: 9px 0;
     @media (max-width: 780px) {
-      font-size: 0.875rem;
     }
   }
 
   // .select__option
   &__option {
     cursor: pointer;
-    padding: 9px 19px;
-    margin: 0px 0px 0px 0px;
-    letter-spacing: -0.5px;
+    padding: 19px 20px;
+    margin: 0;
+    border-radius: 19px;
+    transition: all 0.3s ease;
     @media (min-width: 992px) {
       &:hover {
-        background: #E1E1E1;
+        background: #FF99A0;
+        color: #ffffff;
       }
     }
   }
 
   &._active {
     z-index: 5;
-
+    border: 1px solid $primary-btn-color;
     .select__value {
-      &:before {
-        transform: rotate(90deg);
-      }
+
     }
 
     .select__options {
@@ -253,13 +275,13 @@ textarea {
 
 //</SELECT>====================================================================================================
 
-.select_city-select {
-  width: 200px;
-  padding: 5px 16px 5px 19px;
-  letter-spacing: -0.5px;
-  border-radius: 17px;
-  background-color: #F2F3F5;
-  border: 1px solid #E1E1E1;
+/* Select around */
+.select_wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+.select_im {
 }
 
 //<RADIO>=====================================================================================================
@@ -306,19 +328,16 @@ textarea {
   font-weight: 600;
   transition: all 0.4s;
   font-size: calc(0.875rem + 2 * (100vw - 320px) / (1920 - 320));
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  display: inline-block;
 }
 
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
   position: absolute;
   left: -9999px;
-}
-
-label {
-  position: relative;
-  padding-left: 36px;
-  cursor: pointer;
-  display: inline-block;
 }
 
 [type="radio"]:checked + label:before,

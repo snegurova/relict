@@ -53,12 +53,12 @@ function scroll_scroll() {
 			let scr_item_height = scr_item.offsetHeight;
 
 
-			let scr_item_point = window.innerHeight - (window.innerHeight - scr_item_height / 2);
+			let scr_item_point = window.innerHeight - (scr_item_height / 2);
 			if (window.innerHeight > scr_item_height) {
-				scr_item_point = window.innerHeight - scr_item_height / 3;
+				scr_item_point = window.innerHeight - scr_item_height / 20;
 			}
 
-			if ((src_value > scr_item_offset - scr_item_point) && src_value < (scr_item_offset + scr_item_height)) {
+			if ((src_value > scr_item_offset - scr_item_point) && src_value < (scr_item_offset)) {
 				scr_item.classList.add('_active');
 				scroll_load_item(scr_item);
 			} else {
