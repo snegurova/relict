@@ -1,42 +1,46 @@
-<footer class="footer">
+<footer class="footer footer_light">
 
         <div class="footer__top">
             <div class="container">
-                <ul class="footer__nav">
-                    <li><a href="#" class="footer__nav-link">Донат</a></li>
-                    <li><a href="#" class="footer__nav-link">Спецпроекти</a></li>
-                    <li><a href="#" class="footer__nav-link">Освітні матеріали</a></li>
-                    <li><a href="#" class="footer__nav-link">Події</a></li>
-                    <li><a href="#" class="footer__nav-link">Результати і звіти</a></li>
+              <div class="footer__wrapper">
+                <div class="footer__top-left">
+                <ul class="footer__logo-list">
+                  <li class="footer__logo-list-item"><a href="#" class="footer__logo-link">
+                    <img src="./img/logo.svg" alt="">
+                  </a></li>
+                  <li class="footer__logo-list-item"><a href="#" class="footer__logo-link">
+                    <img src="./img/google-logo.png" alt="">
+                  </a></li>
+                  <li class="footer__logo-list-item"><a href="#" class="footer__logo-link">
+                    <img src="./img/linkedin-logo-icon.svg" alt="">
+                  </a></li>
                 </ul>
-                <div class="footer__top-right">
-                    <ul class="footer__hash-list">
-                        <li><a href="#" class="footer__hash-link">#безхутра</a></li>
-                        <li><a href="#" class="footer__hash-link">#циркбезтварин</a></li>
-                    </ul>
-                    <div class="footer__social">
-<!--                        @@include('_social-icons.html',{})-->
-                    </div>
-                </div>
+              </div>
+                <ul class="footer__nav footer__top-right">
+                  <li><a href="#" class="footer__nav-link">Solutions</a></li>
+                  <li><a href="#" class="footer__nav-link">Packages</a></li>
+                  <li><a href="#" class="footer__nav-link">About us</a></li>
+                  <li><a href="#" class="footer__nav-link">Newsletter</a></li>
+                  <li><a href="#" class="footer__nav-link">Privacy Policy </a></li>
+                  <li><a href="#" class="footer__nav-link">T&C</a></li>
+                </ul>
+                
+              </div>
+              
             </div>
         </div>
         <div class="footer__bottom">
-            <div class="container move-policies">
-                <div class="footer__left">
-                    <div class="footer__copywrite">UAnimals    © 2020</div>
-                    <ul data-da=".move-policies,860,first" class="policies">
-                        <li data-da=".policies,860,last" class="policies__payment">
-                            <img src="./img/payment-systems-footer.svg" alt="Платіжні системи Віза та Мастер кард">
-                        </li>
-                        <li><a href="#" class="policies__link">Публічна оферта</a></li>
-                        <li><a href="#" class="policies__link">Політика конфіденційності</a></li>
-                    </ul>
+          <div class="container">
+            <div class="footer__wrapper">
+              <form action="" class="subscribe-form">
+                <div class="input-form__wrapper subscribe-form__email-wrapper">
+                  <input class="form-input form-input_full-width" id="email-subscribe" type="email"
+                         data-error="" data-value="" placeholder="Enter your email">
                 </div>
-                
-                <div data-da=".footer__left,860,last" class="footer__developed-by">
-                    <span>Made by </span><a href="#">Geometric</a>
-                </div>
+                <button class="btn btn_submit-full">Submit</button>
+              </form>
             </div>
+          </div>
         </div>
 
 </footer>

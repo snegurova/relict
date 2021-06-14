@@ -3,6 +3,19 @@
   &.svg_top {
     top: -1150px;
     left: calc(845px + (100vw - 1280px) / 2);
+    width: calc(358px + 507 * (100vw - 320px) / (1240 - 320));
+    height: calc(601px + 881 * (100vw - 320px) / (1240 - 320));
+    @media screen and (min-width: 1240px) {
+      top: -1150px;
+      left: calc(845px + (100vw - 1280px) / 2);
+      width: 865px;
+      height: 1452px;
+    }
+    //width: 865px;
+    //height: 1452px;
+    //top: -468px;
+    //left: 161px;
+    //right: 366px;
   }
 
   &.svg_bottom {
@@ -21,21 +34,33 @@
   &__lines {
     z-index: 1;
     .line__top {
-      top: -920px;
-      right: calc(-660px + (100vw - 1280px) / 2);
+      top: calc(-1040px + 120 * (100vw - 320px) / (1240 - 320));
+      right: calc(-790px + 130 * (100vw - 320px) / (1240 - 320));
+      @media screen and (min-width: 1240px) {
+        top: -920px;
+        right: -660px;
+      }
+      //top: -920px
+      //right: -660px;
+      //top: -1040px;
+      //right: -790px; //calc(-790px + 130 * (100vw - 320px) / (1920 - 320))
     }
     .line__bottom {
-      top: -1106px;
-      right: calc(-922px + (100vw - 1280px) / 2);
+      top: calc(-1226px + 120 * (100vw - 320px) / (1240 - 320));
+      right: calc(-1052px + 130 * (100vw - 320px) / (1240 - 320));
+      @media screen and (min-width: 1240px) {
+        top: -1106px;
+        right: -922px;
+      }
     }
   }
 }
 
 .home-banner {
-  padding: 59px 0;
+  padding: calc(15px + 44 * (100vw - 320px) / (1280 - 320)) 0;
   h1 {
     font-weight: 900;
-    font-size: 6rem;
+    font-size: calc(2.25rem + 60 * (100vw - 320px) / (1280 - 320));
     line-height: 1.1;
     .heading__accent {
       display: block;
@@ -43,10 +68,13 @@
   }
   &__subtitle {
     max-width: 425px;
-    font-size: 1.75rem;
+    font-size: calc(1rem + 12 * (100vw - 320px) / (1280 - 320));
     line-height: 1.4;
     margin-top: 29px;
     margin-bottom: 53px;
+    @media screen and (max-width: 560px) {
+      margin-bottom: 42px;
+    }
   }
 }
 .heading__accent {
@@ -102,6 +130,9 @@
 
 .ad-products {
   padding: 59px 0;
+  @media screen and (max-width: 560px) {
+    padding: 20px 0;
+  }
   &__subtitle {
     max-width: 413px;
   }
@@ -163,12 +194,11 @@
     border-radius: 50px;
     background-color: $secondary-btn-color;
     padding: 84px 0 94px 109px;
-    overflow: hidden;
     @media screen and (max-width: 1130px) {
       padding: 84px 109px 94px;
     }
     @media screen and (max-width: 560px) {
-      padding: 75px 0 71px;
+      padding: 75px 16px 71px;
       border-radius: 0;
     }
   }
@@ -185,6 +215,7 @@
     color: #eef5f8;
     text-transform: uppercase;
     font-size: 2.25rem;
+    position: relative;
     @media screen and (max-width: 560px) {
       font-size: 1.5rem;
     }
