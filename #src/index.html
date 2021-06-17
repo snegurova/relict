@@ -373,6 +373,7 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
+          @@for (var i = 0; i < 9; i++) {
           <div class="swiper-slide blog-posts__slide">
             @@include('_post-card.html',{
             "tag":"Company News",
@@ -382,78 +383,7 @@
             "excerpt":"In the Ooma vs Vonage, which comes out on top? We’ll look at both services and let you know about the third option you should choose instead."
             })
           </div>
-          <div class="swiper-slide blog-posts__slide">
-            @@include('_post-card.html',{
-            "tag":"Company News",
-            "date":"April 28, 2021",
-            "timeToRead":"6 mins read",
-            "title":"Ooma vs Vonage: Which One Is Right for You?",
-            "excerpt":"In the Ooma vs Vonage, which comes out on top? We’ll look at both services and let you know about the third option you should choose instead."
-            })
-          </div>
-          <div class="swiper-slide blog-posts__slide">
-            @@include('_post-card.html',{
-            "tag":"Company News",
-            "date":"April 28, 2021",
-            "timeToRead":"6 mins read",
-            "title":"Ooma vs Vonage: Which One Is Right for You?",
-            "excerpt":"In the Ooma vs Vonage, which comes out on top? We’ll look at both services and let you know about the third option you should choose instead."
-            })
-          </div>
-          <div class="swiper-slide blog-posts__slide">
-            @@include('_post-card.html',{
-            "tag":"Company News",
-            "date":"April 28, 2021",
-            "timeToRead":"6 mins read",
-            "title":"Ooma vs Vonage: Which One Is Right for You?",
-            "excerpt":"In the Ooma vs Vonage, which comes out on top? We’ll look at both services and let you know about the third option you should choose instead."
-            })
-          </div>
-          <div class="swiper-slide blog-posts__slide">
-            @@include('_post-card.html',{
-            "tag":"Company News",
-            "date":"April 28, 2021",
-            "timeToRead":"6 mins read",
-            "title":"Ooma vs Vonage: Which One Is Right for You?",
-            "excerpt":"In the Ooma vs Vonage, which comes out on top? We’ll look at both services and let you know about the third option you should choose instead."
-            })
-          </div>
-          <div class="swiper-slide blog-posts__slide">
-            @@include('_post-card.html',{
-            "tag":"Company News",
-            "date":"April 28, 2021",
-            "timeToRead":"6 mins read",
-            "title":"Ooma vs Vonage: Which One Is Right for You?",
-            "excerpt":"In the Ooma vs Vonage, which comes out on top? We’ll look at both services and let you know about the third option you should choose instead."
-            })
-          </div>
-          <div class="swiper-slide blog-posts__slide">
-            @@include('_post-card.html',{
-            "tag":"Company News",
-            "date":"April 28, 2021",
-            "timeToRead":"6 mins read",
-            "title":"Ooma vs Vonage: Which One Is Right for You?",
-            "excerpt":"In the Ooma vs Vonage, which comes out on top? We’ll look at both services and let you know about the third option you should choose instead."
-            })
-          </div>
-          <div class="swiper-slide blog-posts__slide">
-            @@include('_post-card.html',{
-            "tag":"Company News",
-            "date":"April 28, 2021",
-            "timeToRead":"6 mins read",
-            "title":"Ooma vs Vonage: Which One Is Right for You?",
-            "excerpt":"In the Ooma vs Vonage, which comes out on top? We’ll look at both services and let you know about the third option you should choose instead."
-            })
-          </div>
-          <div class="swiper-slide blog-posts__slide">
-            @@include('_post-card.html',{
-            "tag":"Company News",
-            "date":"April 28, 2021",
-            "timeToRead":"6 mins read",
-            "title":"Ooma vs Vonage: Which One Is Right for You?",
-            "excerpt":"In the Ooma vs Vonage, which comes out on top? We’ll look at both services and let you know about the third option you should choose instead."
-            })
-          </div>
+          }
         </div>
         <!-- If we need scrollbar -->
         <div class="swiper-scrollbar"></div>
