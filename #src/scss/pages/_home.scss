@@ -552,45 +552,6 @@
     }
   }
 }
-.blog-post {
-  &__card {
-    border: none;
-    background-color: #f7f8fb;
-    padding: 33px 44px;
-  }
-  &__tag {
-    color: $primary-btn-color;
-    font-weight: 500;
-    margin-bottom: 11px;
-  }
-  &__info {
-    display: flex;
-    color: #86a3c0;
-  }
-  &__date {
-    margin-right: 27px;
-  }
-  &__time-to-read {
-    display: flex;
-    align-items: center;
-    &::before {
-      content: "";
-      width: 14px;
-      height: 14px;
-      margin-right: 8px;
-      background: url("../img/post-time-icon.svg") center no-repeat;
-    }
-  }
-  &__title {
-    margin: 12px 0 17px;
-    font-weight: 700;
-  }
-  &__excerpt {
-    margin-top: 14px;
-    color: #5c6670;
-    font-size: 1.25rem;
-  }
-}
 .contact-us {
   padding: 47px 0 110px;
   &__form {

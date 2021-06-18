@@ -784,6 +784,89 @@ body._touch .header__nav-list > li._active .menu__sub-list {
   }
 }
 
+.card_2 {
+  width: 47.8%;
+}
+
+.card_2:hover {
+  box-shadow: 0px 16px 49px -10px rgba(67, 49, 160, 0.1);
+}
+
+@media screen and (max-width: 870px) {
+  .card_2 {
+    width: 47.8%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .card_2 {
+    width: 100%;
+  }
+}
+
+.card_2:not(:nth-child(2n)) {
+  margin-right: 4.3%;
+}
+
+@media screen and (max-width: 560px) {
+  .card_2:not(:nth-child(2n)) {
+    margin-right: 0;
+  }
+}
+
+.blog-post__card {
+  display: block;
+  border: none;
+  background-color: #f7f8fb;
+  padding: 33px 44px;
+}
+
+.blog-post__tag {
+  color: #FF3B59;
+  font-weight: 500;
+  margin-bottom: 11px;
+}
+
+.blog-post__info {
+  display: flex;
+  color: #86a3c0;
+}
+
+.blog-post__date {
+  margin-right: 27px;
+}
+
+.blog-post__time-to-read {
+  display: flex;
+  align-items: center;
+}
+
+.blog-post__time-to-read::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  background: url("../img/post-time-icon.svg") center no-repeat;
+}
+
+.blog-post__title {
+  margin: 12px 0 17px;
+  font-weight: 700;
+}
+
+.blog-post__excerpt {
+  margin-top: 14px;
+  color: #5c6670;
+  font-size: 1.25rem;
+}
+
+.test-blur {
+  width: 100px;
+  height: 100px;
+  filter: blur(40px);
+  background-color: #CFD9E3;
+}
+
 .tab__item {
   display: none;
 }
@@ -2643,51 +2726,6 @@ textarea {
 
 .blog-posts__slider .swiper-wrapper {
   margin-bottom: 52px;
-}
-
-.blog-post__card {
-  border: none;
-  background-color: #f7f8fb;
-  padding: 33px 44px;
-}
-
-.blog-post__tag {
-  color: #FF3B59;
-  font-weight: 500;
-  margin-bottom: 11px;
-}
-
-.blog-post__info {
-  display: flex;
-  color: #86a3c0;
-}
-
-.blog-post__date {
-  margin-right: 27px;
-}
-
-.blog-post__time-to-read {
-  display: flex;
-  align-items: center;
-}
-
-.blog-post__time-to-read::before {
-  content: "";
-  width: 14px;
-  height: 14px;
-  margin-right: 8px;
-  background: url("../img/post-time-icon.svg") center no-repeat;
-}
-
-.blog-post__title {
-  margin: 12px 0 17px;
-  font-weight: 700;
-}
-
-.blog-post__excerpt {
-  margin-top: 14px;
-  color: #5c6670;
-  font-size: 1.25rem;
 }
 
 .contact-us {

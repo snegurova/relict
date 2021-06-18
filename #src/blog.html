@@ -6,7 +6,23 @@
 
   @@include('_header.html')
   <main class="main">
-  
+  <section class="our-blog">
+    <div class="container">
+      <div class="cards">
+        @@for (var i = 0; i < 6; i++) {
+        @@include('_post-card.html',{
+        "modifier":"card_2",
+        "tag":"Company News",
+        "date":"April 28, 2021",
+        "timeToRead":"6 mins read",
+        "title":"Ooma vs Vonage: Which One Is Right for You?",
+        "excerpt":"In the Ooma vs Vonage, which comes out on top? We’ll look at both services and let you know about the third option you should choose instead."
+        })
+        }
+      </div>
+    </div>
+  </section>
+    <div class="test-blur"></div>
   </main>
   @@include('_footer.html',{})
 </div>
