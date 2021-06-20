@@ -39,9 +39,11 @@
     width: 100%;
     margin: auto;
     overflow: hidden;
-
+    picture {
+      width: 100%;
+    }
     img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
       transition: all 0.4s;
       display: block;
