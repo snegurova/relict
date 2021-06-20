@@ -64,7 +64,7 @@ function html() {
 	return src(path.src.html)
 		.pipe(fileinclude())
 		.pipe(webphtml())
-		// .pipe(replace('href=\"/', 'href=\"/uanimals/uanimals/'))
+		// .pipe(replace('href=\"/', 'href=\"/relict/relict/'))
 		.pipe(dest(path.build.html))
 		.pipe(browsersync.stream())
 }
