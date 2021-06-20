@@ -43,7 +43,7 @@
   &__wrapper {
     margin: 57px 0 39px;
     @media screen and (max-width: 560px) {
-      margin: 34px 0 5px;
+      margin: 34px 0 17px;
     }
   }
   &__item {
@@ -76,5 +76,8 @@
   .card {
     margin-top: 24px;
     max-width: 521px;
+    @media screen and (max-width: 560px) {
+      margin-top: 12px;
+    }
   }
 }
