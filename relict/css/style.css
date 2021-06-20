@@ -1145,13 +1145,8 @@ Sliders
 ============*/
 .pagination__wrapper {
   display: flex;
-  margin-top: 60px;
-}
-
-@media screen and (max-width: 1337px) {
-  .pagination__wrapper {
-    justify-content: center;
-  }
+  margin-top: 66px;
+  justify-content: center;
 }
 
 .pagination__prev, .pagination__next, .pagination__item {
@@ -1159,46 +1154,57 @@ Sliders
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 8px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: 1px solid #696969;
-  color: #696969;
+  color: #0E0E12;
   transition: all 0.4s;
 }
 
 .pagination__prev:hover, .pagination__prev_active, .pagination__next:hover, .pagination__next_active, .pagination__item:hover, .pagination__item_active {
   cursor: pointer;
-  color: #fff;
-  background-color: #222222;
 }
 
-.pagination__prev:hover path, .pagination__prev_active path, .pagination__next:hover path, .pagination__next_active path, .pagination__item:hover path, .pagination__item_active path {
-  stroke: #fff;
+.pagination__prev, .pagination__next {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.465em;
 }
 
-.pagination__prev_disabled, .pagination__next_disabled, .pagination__item_disabled {
-  background-color: #F2F3F5;
-  border-color: #C4C4C4;
+.pagination__prev:hover, .pagination__prev_active, .pagination__next:hover, .pagination__next_active {
+  opacity: 0.8;
+}
+
+.pagination__prev_disabled, .pagination__next_disabled {
+  color: #86A3C0;
+}
+
+.pagination__prev_disabled:hover, .pagination__next_disabled:hover {
+  opacity: 1;
+  cursor: default;
+}
+
+.pagination__prev {
+  margin-right: 29px;
 }
 
 .pagination__next {
-  transform: scale(-1);
+  margin-left: 29px;
 }
 
-.pagination_light {
-  margin-top: 47px;
+.pagination__item {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  transition: all 0.4s;
 }
 
-.pagination_light .pagination__prev:hover, .pagination_light .pagination__prev_active, .pagination_light .pagination__next:hover, .pagination_light .pagination__next_active, .pagination_light .pagination__item:hover, .pagination_light .pagination__item_active {
-  background-color: #696969;
+.pagination__item:hover, .pagination__item_active {
+  cursor: pointer;
+  color: #fff;
+  background-color: #FF3B59;
 }
 
-@media screen and (max-width: 880px) {
-  .pagination_light.pagination__wrapper {
-    justify-content: flex-start;
-  }
+.pagination__item:not(:last-child) {
+  margin-right: 5px;
 }
 
 input[type="text"],
@@ -1847,7 +1853,7 @@ textarea {
 }
 
 .footer__logo-link:hover {
-  color: #fff;
+  color: #B6C5D3;
 }
 
 .footer__copywrite, .footer__developed-by {
@@ -1863,7 +1869,7 @@ textarea {
 }
 
 .footer__copywrite a, .footer__developed-by a {
-  color: #fff;
+  color: #B6C5D3;
   transition: color 0.5s;
   text-decoration: none;
 }

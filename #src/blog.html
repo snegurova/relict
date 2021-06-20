@@ -37,10 +37,14 @@
         }
       </div>
     </div>
+    @@include('_pagination.html',{
+      modifier: ""
+    })
   </section>
-    <div class="test-blur"></div>
   </main>
-  @@include('_footer.html',{})
+  @@include('_footer.html',{
+    modifier: ""
+  })
 </div>
 @@include('_js.html',{})
 </body>
