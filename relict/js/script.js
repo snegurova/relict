@@ -1,4 +1,3 @@
-
 /*!
  * dist/inputmask.min
  * https://github.com/RobinHerbots/Inputmask
@@ -11260,16 +11259,17 @@ if (priceSlider) {
 //Shop radio buttons
 const radioButtons = document.querySelectorAll('._radio');
 
-const toggleActive = (elements) => {
+const removeActive = (elements) => {
   elements.forEach((el) => {
-    el.classList.toggle("active");
+    el.classList.remove("_active");
   });
 };
 
 radioButtons.forEach((radioButton) => {
   radioButton.addEventListener('click', (e) => {
     e.preventDefault();
-    toggleActive(radioButtons);
+    removeActive(radioButtons);
+    e.target.parentElement.classList.add("_active");
   });
 });
 
@@ -11442,6 +11442,7 @@ function testWebP(callback) {
 	};
 	webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
 }
+
 testWebP(function (support) {
 	if (support == true) {
 		document.querySelector('html').classList.add('_webp');
