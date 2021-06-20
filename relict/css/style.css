@@ -1778,7 +1778,6 @@ textarea {
 
 @media screen and (max-width: 630px) {
   .footer {
-    background-color: #e3e7ef;
     padding: 42px 0 0;
   }
 }
@@ -1851,7 +1850,6 @@ textarea {
 
 @media screen and (max-width: 630px) {
   .footer__bottom {
-    background-color: #e3e7ef;
     padding: 25px 0;
   }
 }
