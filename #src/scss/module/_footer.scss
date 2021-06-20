@@ -3,7 +3,7 @@
   color: $footer-font-color;
   padding: 42px 0 ;
   @media screen and (max-width: 630px) {
-    background-color: #e3e7ef;
+    //background-color: #e3e7ef;
     padding: 42px 0 0;
   }
   ul {
@@ -68,7 +68,7 @@
   &__bottom {
     padding: 20px 0;
     @media screen and (max-width: 630px) {
-      background-color: #e3e7ef;
+      //background-color: #e3e7ef;
       padding: 25px 0;
     }
     .container {
