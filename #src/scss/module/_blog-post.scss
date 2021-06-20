@@ -5,6 +5,11 @@
     border: none;
     background-color: #f7f8fb;
     padding: 33px 44px;
+
+    &_modifier {
+      margin-top: 0;
+      background-color: #FFFFFF;
+    }
     @media screen and (max-width: 992px) {
       padding: 31px 16px 41px;
     }

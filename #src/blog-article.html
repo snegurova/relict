@@ -1,0 +1,92 @@
+@@include('_head.html',{
+"title":"Relict"
+})
+<body>
+<div class="wrapper">
+  @@include('_header.html', {
+  })
+  <main class="main blog-article">
+    <article>
+      <header class="blog-article-header">
+        
+        <div class="blog-article-container blog-article-container_center">
+          <div class="blog-article-header__tag">Company News</div>
+          <div class="blog-article-header__title-wrapper">
+            <h1 class="blog-article-header__title">Ooma vs Vonage: Which One Is Right for You?</h1>
+            <a href="/blog.html" class="blog-article-header__arrow">
+              <img src="./img/arrow-left-icon.svg" alt="arrow-left-icon">
+            </a>
+          </div>
+          <div class="blog-article-header__info">
+            <div class="blog-article-header__date">April 28, 2021</div>
+            <div class="blog-article-header__time-to-read">6 mins read</div>
+          </div>
+        </div>
+      </header>
+      <section class="blog-article-post">
+        <div class="blog-article-container">
+          <p>
+            Popularity isn’t always a sign of a smooth-functioning internet phone service. Take <span class="blog-article-post__content_important">Google Voice</span> for instance. It’s one of the most well-known options on the market, and yet users often report multiple issues per month. 😬 If you rely on the platform to manage all <span class="blog-article-post__content_important">your business phone calls</span> and text messages, Google Voice not working can reflect poorly on your brand.
+          </p>
+          <p>
+            As a professional or a small business owner, you need to be aware of all the roadblocks you may face (and if they can even be solved) before you choose your phone service. While you may be drawn in by Google Voice’s free pricing for individuals, the service could end up costing you if it creates poor client experiences and inefficiencies within your team.
+          </p>
+          <ul>
+            <li>Poor internet connection</li>
+            <li>Incompatible browser (must use Chrome, Microsoft Edge, Safari, or Mozilla Firefox)</li>
+            <li>Browser not updated</li>
+          </ul>
+          <h2>9 Common Google Voice Issues</h2>
+          <p>
+            Google Voice doesn’t have a flawless track record when it comes to VoIP calls — far from it. Just entering <span class="blog-article-post__content_important">“Google Voice not working”</span> on a Google search brings up a number of complaints, questions, and articles about known (and sometimes unresolved) problems. If you’re currently using Google Voice and are having issues with crucial business phone features, you’re not the only one.
+          </p>
+          <img src="./img/blog-article-image.svg" alt="blog-article-image">
+          <p>
+            Popularity isn’t always a sign of a smooth-functioning internet phone service. Take Google Voice for instance. It’s one of the most well-known options on the market, and yet users often report multiple issues per month. 😬 If you rely on the platform to manage all your business phone calls and text messages, Google Voice not working can reflect poorly on your brand.
+          </p>
+          <p>
+            As a professional or a small business owner, you need to be aware of all the roadblocks you may face (and if they can even be solved) before you choose your phone service. While you may be drawn in by Google Voice’s free pricing for individuals, the service could end up costing you if it creates poor client experiences and inefficiencies within your team.
+          </p>
+          <p>
+            So what Google Voice issues do users face? And since Google doesn’t even offer customer support, how can you address them? We’ll help you troubleshoot nine common problems on the app, then explain how switching to a Google Voice alternative like OpenPhone can be a one-step remedy for all your GV woes.
+          </p>
+          <a href="#" class="blog-article-post__share">
+            <div class="blog-article-post__share-icon"><img src="./img/share-icon.svg" alt="share-icon"></div>
+            <div class="blog-article-post__share-title">Share this article</div>
+          </a>
+        </div>
+      </section>
+    </article>
+    <section class="blog-article-recommended">
+        <h2 class="blog-article-recommended__title">Recommended posts</h2>
+      <!-- Slider main container -->
+      <div class="swiper-container blog-posts__slider">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          @@for (var i = 0; i < 9; i++) {
+          <div class="swiper-slide blog-posts__slide">
+            @@include('_post-card.html',{
+            "titleLevel":"h3",
+            "tag":"Company News",
+            "date":"April 28, 2021",
+            "timeToRead":"6 mins read",
+            "title":"Ooma vs Vonage: Which One Is Right for You?",
+            "excerpt":"In the Ooma vs Vonage, which comes out on top? We’ll look at both services and let you know about the third option you should choose instead.",
+            "modifier":"blog-post__card_modifier"
+            })
+          </div>
+          }
+        </div>
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </section>
+  </main>
+  @@include('_footer.html',{
+    modifier: ""
+  })
+</div>
+@@include('_js.html',{})
+</body>
+</html>
