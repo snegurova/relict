@@ -48,6 +48,7 @@
   position: relative;
   transition-property: transform;
   background-color: $background-color;
+  border-radius: 20px; // AK CHANGED
 }
 .swiper-slide-invisible-blank {
   visibility: hidden;

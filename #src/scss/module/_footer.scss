@@ -120,7 +120,7 @@
     color: $accent-color;
 
     &:hover {
-      color: $footer-font-color;
+      color: $label-color;
     }
   }
 
@@ -133,7 +133,7 @@
     }
 
     a {
-      color: $footer-font-color;
+      color: $label-color;
       transition: color 0.5s;
       text-decoration: none;
 

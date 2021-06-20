@@ -8,23 +8,7 @@
   <main class="main">
   <section class="our-blog">
     <div class="container">
-      <h1>Our Blog</h1>
-      <div class="our-blog__subtitle">Recent publication</div>
-      <div class="tag-links__wrapper">
-        <ul class="tag-links__list mobile-link-select">
-          <li class="tag-links__item _active _radio"><a href="#">Company News</a></li>
-          <li class="tag-links__item _radio"><a href="#">Marketing geeks</a></li>
-          <li class="tag-links__item _radio"><a href="#">Other News</a></li>
-        </ul>
-        <select class="select_im tag-links__select">
-          <option value="Company News" selected="selected">
-            Company News
-          </option>
-          <option value="Marketing geeks">Marketing geeks</option>
-          <option value="Other News">Other News</option>
-        </select>
-      </div>
-      <div class="cards cards_our-blog">
+      <div class="cards">
         @@for (var i = 0; i < 6; i++) {
         @@include('_post-card.html',{
         "modifier":"card_2",
@@ -37,14 +21,10 @@
         }
       </div>
     </div>
-    @@include('_pagination.html',{
-      modifier: ""
-    })
   </section>
+    <div class="test-blur"></div>
   </main>
-  @@include('_footer.html',{
-    modifier: ""
-  })
+  @@include('_footer.html',{})
 </div>
 @@include('_js.html',{})
 </body>

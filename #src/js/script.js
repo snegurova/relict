@@ -1,3 +1,4 @@
+
 @@include('libs/inputmask.min.js', {})
 @@include('functions.js', {})
 @@include('sliders.js', {})
@@ -13,7 +14,6 @@ function testWebP(callback) {
 	};
 	webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
 }
-
 testWebP(function (support) {
 	if (support == true) {
 		document.querySelector('html').classList.add('_webp');

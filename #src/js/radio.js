@@ -2,16 +2,15 @@
 //Shop radio buttons
 const radioButtons = document.querySelectorAll('._radio');
 
-const removeActive = (elements) => {
+const toggleActive = (elements) => {
   elements.forEach((el) => {
-    el.classList.remove("_active");
+    el.classList.toggle("active");
   });
 };
 
 radioButtons.forEach((radioButton) => {
   radioButton.addEventListener('click', (e) => {
     e.preventDefault();
-    removeActive(radioButtons);
-    e.target.parentElement.classList.add("_active");
+    toggleActive(radioButtons);
   });
 });
