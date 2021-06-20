@@ -8,74 +8,43 @@ body {
   color: $main-font-color;
 }
 
-h1 { // AK CHANGED
-  font-size: 2.25rem;
+h1 {
+  font-size: calc(1.5rem + 12 * (100vw - 320px) / (1280 - 320));
   font-weight: 500;
-  margin: 20px 0 30px;
+  margin: 36px 0 28px;
   text-transform: uppercase;
   text-align: center;
-  //@media screen and (max-width: 1280px) { // AK CHANGED
-  //  font-size: 2.25rem;
-  //  margin: 30px 0 46px;
-  //}
-  //@media screen and (max-width: 992px) {
-  //  font-size: 1.5rem;
-  //  margin: 23px 0 35px;
-  //}
-
-  @media screen and (max-width: 560px) { // AK CHANGED
-    font-size: 1.5rem;
-    font-weight: 500;
+  @media screen and (min-width: 1280px) {
+    font-size: 2.25rem;
+    margin: 32px 0 18px;
+  }
+  @media screen and (max-width: 992px) {
+    margin: 24px 0 10px;
   }
 }
-.banner-heading {
-  font-size: 2.8rem;
-  font-weight: 800;
-}
-.section-heading {
-  font-size: 2.25rem;
-  font-weight: 800;
-  margin: 45px 0 55px;
-  @media screen and (max-width: 1280px) {
-    font-size: 1.7rem;
-    margin: 30px 0 46px;
-  }
-}
-h2 { // AK CHANGED
+h2 {
   font-size: 1.25rem;
   font-weight: 700;
-  margin: 20px 0 30px;
+  margin-bottom: 36px;
+}
 
-  @media screen and (max-width: 560px) { // AK CHANGED
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: calc(1rem + 4 * (100vw - 320px) / (1280 - 320));
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 8px 0 8px 0;
+  @media screen and (min-width: 1280px) {
     font-size: 1.25rem;
   }
 }
 
-h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.section-description {
-  max-width: 760px;
-}
-
-.section-promo-text {
-  margin: 15px 0 63px;
-  max-width: 850px;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-p { // AK CHANGED
-  margin: 0 0 20px;
-  font-size: 1.25rem;
-  line-height: 1.4;
+ul {
   font-weight: 400;
-
-  @media screen and (max-width: 560px) { // AK CHANGED
-    font-size: 1rem;
-  }
 }
 
 button {
@@ -86,51 +55,6 @@ button {
   color: $main-font-color;
 }
 
-ul { // AK CHANGED
-  font-size: 1.25rem;
-  line-height: 1.4;
-  font-weight: 400;
-
-  @media screen and (max-width: 560px) { // AK CHANGED
-    font-size: 1rem;
-  }
-}
-
-.mark {
-  position: relative;
-  &::after {
-    content: '';
-    position: absolute;
-    top: 11px;
-    left: -12px;
-    background-color: #60CAE5;
-    width: 116%;
-    height: 80%;
-    transform: rotate(11deg);
-    z-index: -1;
-  }
-  &_small {
-    color: $main-font-color;
-    &::after {
-      top: -8px;
-      left: -10px;
-      width: 110%;
-      height: 120%;
-      transform: rotate(355deg);
-    }
-  }
-}
-.section-promo-text {
-  .mark {
-    &::after {
-      top: -5px;
-      left: -7px;
-      width: 103%;
-      height: 135%;
-      transform: rotate(3deg);
-    }
-  }
-}
 .highlighted {
   display: inline-block;
   background-color: $accent-color;

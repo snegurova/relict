@@ -14,9 +14,21 @@
   border-radius: 20px;
   padding: 27px;
   transition: all 0.4s;
-
-  &:hover {
-    box-shadow: 0px 16px 49px -10px rgba(229, 242, 255, 0.6);
+  &::before {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    width: 60%;
+    height: 51%;
+    top: 40%;
+    left: 20%;
+    filter: blur(40px);
+    background-color: $card-shadow-bg-color;
+    transition: all 0.5s ease;
+  }
+  &:hover::before {
+    opacity: 1;
   }
 
   &__img-wrapper {
@@ -83,10 +95,6 @@
 .card_3 {
   width: 31.4%;
 
-  &:hover {
-    box-shadow: 0px 16px 49px -10px rgba(67, 49, 160, 0.1);
-  }
-
   @media screen and (max-width: 870px) {
     width: 47.8%;
   }
@@ -112,21 +120,13 @@
 }
 
 .card_2 {
-  width: 47.8%;
-
-  &:hover {
-    box-shadow: 0px 16px 49px -10px rgba(67, 49, 160, 0.1);
-  }
-
-  @media screen and (max-width: 870px) {
-    width: 47.8%;
-  }
+  width: 47.7%;
   @media screen and (max-width: 560px) {
     width: 100%;
   }
 
   &:not(:nth-child(2n)) {
-    margin-right: 4.3%;
+    margin-right: 24px;
     @media screen and (max-width: 560px) {
       margin-right: 0;
     }

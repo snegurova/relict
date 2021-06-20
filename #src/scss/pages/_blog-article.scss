@@ -10,14 +10,8 @@
 }
 
 .blog-article {
-  //margin-top: 0;
-
   &.main {
     margin-top: 0;
-
-    //@media screen and (max-width: 560px){
-    //  margin-top: 78px;
-    //}
   }
 
   & > article {
@@ -46,6 +40,11 @@
     content: '';
     top: calc(50% - 8px);
     left: 12%;
+    transition: .2s;
+
+    &:hover {
+      filter: opacity(50%);
+    }
 
     @media screen and (max-width: 992px) {
       display: none;
@@ -58,14 +57,20 @@
     font-weight: 500;
   }
 
+  &__title {
+    margin: 18px 0 64px;
+
+    @media screen and (max-width: 560px) {
+      margin: 24px 0 32px;
+    }
+  }
+
   &__info {
     display: flex;
-    margin-top: 1.25rem;
     font-size: 22px;
     color: #86a3c0;
 
     @media screen and (max-width: 560px) {
-      margin-top: 0;
       font-size: 1rem;
     }
   }
@@ -88,10 +93,10 @@
 }
 
 .blog-article-post {
-  padding: 64px 0 114px;
+  padding: 56px 0 114px;
 
   @media screen and (max-width: 560px){
-    padding: 55px 0 62px;
+    padding: 47px 0 62px;
   }
 
   &__content {
@@ -99,27 +104,42 @@
       color: #f15f3c;
     }
   }
-  &__img {
-    margin: 10px 0 20px
+
+  & img {
+    display: block;
   }
+
+  & picture {
+    margin: 26px 0 42px;
+
+    @media screen and (max-width: 560px){
+      margin: 32px 0 69px;
+    }
+  }
+
   &__share {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 48px;
+    margin-top: 60px;
+    padding: 16px 0;
     width: 100%;
-    height: 84px;
     border-radius: 10px;
     background-color: #F7F8FB;
     text-decoration: none;
     color: #030F29;
 
+    &:hover > * {
+      filter: opacity(50%);
+    }
+
     @media screen and (max-width: 560px){
-      margin-top: 20px;
+      margin-top: 36px;
     }
 
     &-icon {
       margin-right: 20px;
+      transition: .2s;
       img {
         display: block;
       }
@@ -127,6 +147,7 @@
     &-title {
       font-size: 18px;
       font-weight: 500;
+      transition: .2s;
     }
   }
 }
@@ -157,6 +178,7 @@
 
     @media screen and (max-width: 560px) {
       font-size: 1.5rem;
+      margin-bottom: 40px;
     }
   }
 }

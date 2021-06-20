@@ -10,6 +10,9 @@
       margin-top: 0;
       background-color: #FFFFFF;
     }
+    @media screen and (max-width: 992px) {
+      padding: 31px 16px 41px;
+    }
   }
   &__tag {
     color: $primary-btn-color;

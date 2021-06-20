@@ -1,54 +1,55 @@
 .pagination {
   &__wrapper {
     display: flex;
-    margin-top: 60px;
-    @media screen and (max-width: 1337px) {
-      justify-content: center;
-    }
+    margin-top: 66px;
+    justify-content: center;
   }
   &__prev, &__next, &__item {
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 8px;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    border: 1px solid #696969;
-    color: #696969;
+    color: $pagination-font-color;
     transition: all 0.4s;
     &:hover, &_active {
       cursor: pointer;
-      color: $label-color;
-      background-color: #222222;
-      path {
-        stroke: $label-color;
-      }
+    }
+  }
+  &__prev, &__next{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.465em;
+    &:hover, &_active {
+      opacity: 0.8;
     }
     &_disabled {
-      background-color: #F2F3F5;
-      border-color: #C4C4C4;
+      color: $pagination-disabled-font-color;
+      &:hover {
+        opacity: 1;
+        cursor: default;
+      }
     }
+  }
+  &__prev {
+    margin-right: 29px;
   }
   &__next {
-    transform: scale(-1);
+    margin-left: 29px;
   }
-  &_light {
-    margin-top: 47px;
-    .pagination {
-      &__prev, &__next, &__item {
-        &:hover, &_active {
-          background-color: #696969;
-        }
-      }
+  &__item {
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    transition: all 0.4s;
+    &:hover, &_active {
+      cursor: pointer;
+      color: $pagination-hover-font-color;
+      background-color: $pagination-bg-color;
     }
-
-    &.pagination__wrapper {
-      @media screen and (max-width: 880px) {
-        justify-content: flex-start;
-      }
-    }
-
   }
+  &__item:not(:last-child) {
+    margin-right: 5px;
+  }
+
 }

@@ -3,7 +3,7 @@
   color: $footer-font-color;
   padding: 42px 0 ;
   @media screen and (max-width: 630px) {
-    background-color: #e3e7ef;
+    //background-color: #e3e7ef;
     padding: 42px 0 0;
   }
   ul {
@@ -120,7 +120,7 @@
     color: $accent-color;
 
     &:hover {
-      color: $label-color;
+      color: $footer-font-color;
     }
   }
 
@@ -133,7 +133,7 @@
     }
 
     a {
-      color: $label-color;
+      color: $footer-font-color;
       transition: color 0.5s;
       text-decoration: none;
 
