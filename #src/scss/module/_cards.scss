@@ -120,17 +120,13 @@
 }
 
 .card_2 {
-  width: 47.8%;
-
-  @media screen and (max-width: 870px) {
-    width: 47.8%;
-  }
+  width: 47.7%;
   @media screen and (max-width: 560px) {
     width: 100%;
   }
 
   &:not(:nth-child(2n)) {
-    margin-right: 4.3%;
+    margin-right: 24px;
     @media screen and (max-width: 560px) {
       margin-right: 0;
     }
