@@ -8,12 +8,15 @@
   <main class="main blog-article">
     <article>
       <header class="blog-article-header">
-        <a href="/blog.html" class="blog-article-header__arrow">
-          <img src="./img/arrow-left-icon.svg" alt="arrow-left-icon">
-        </a>
+        
         <div class="blog-article-container blog-article-container_center">
           <div class="blog-article-header__tag">Company News</div>
-          <h1 class="blog-article-header__title">Ooma vs Vonage: Which One Is Right for You?</h1>
+          <div class="blog-article-header__title-wrapper">
+            <h1 class="blog-article-header__title">Ooma vs Vonage: Which One Is Right for You?</h1>
+            <a href="/blog.html" class="blog-article-header__arrow">
+              <img src="./img/arrow-left-icon.svg" alt="arrow-left-icon">
+            </a>
+          </div>
           <div class="blog-article-header__info">
             <div class="blog-article-header__date">April 28, 2021</div>
             <div class="blog-article-header__time-to-read">6 mins read</div>
@@ -55,7 +58,7 @@
       </section>
     </article>
     <section class="blog-article-recommended">
-        <div class="blog-article-recommended__title">Recommended posts</div>
+        <h2 class="blog-article-recommended__title">Recommended posts</h2>
       <!-- Slider main container -->
       <div class="swiper-container blog-posts__slider">
         <!-- Additional required wrapper -->
@@ -64,6 +67,7 @@
           @@for (var i = 0; i < 9; i++) {
           <div class="swiper-slide blog-posts__slide">
             @@include('_post-card.html',{
+            "titleLevel":"h3",
             "tag":"Company News",
             "date":"April 28, 2021",
             "timeToRead":"6 mins read",
@@ -80,7 +84,7 @@
     </section>
   </main>
   @@include('_footer.html',{
-    "theme": ""
+    modifier: ""
   })
 </div>
 @@include('_js.html',{})

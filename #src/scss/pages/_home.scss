@@ -62,6 +62,8 @@
     font-weight: 900;
     font-size: calc(2.25rem + 60 * (100vw - 320px) / (1280 - 320));
     line-height: 1.1;
+    text-transform: none;
+    text-align: left;
     .heading__accent {
       display: block;
     }
@@ -156,6 +158,9 @@
       .ad-products__more::after {
         transform: translateX(5px) rotate(-90deg);
       }
+    }
+    picture {
+      width: unset;
     }
     .card__title {
       text-align: center;
@@ -546,6 +551,7 @@
     }
     @media screen and (max-width: 780px) {
       margin-left: 16px;
+      margin-right: 16px;
     }
     .swiper-wrapper {
       margin-bottom: 52px;

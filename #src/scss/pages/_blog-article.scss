@@ -7,6 +7,12 @@
   &_center {
     align-items: center;
   }
+  ul {
+    margin: 12px 0;
+  }
+  h2 {
+    margin-top: 42px;
+  }
 }
 
 .blog-article {
@@ -27,19 +33,18 @@
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 170px 0 64px;
+  padding: 183px 0 64px;
   width: 100%;
   background-color: #F7F8FB;
 
   @media screen and (max-width: 560px) {
-    padding: 116px 0 39px;
+    padding: 106px 0 39px;
   }
 
   &__arrow {
     position: absolute;
-    content: '';
-    top: calc(50% - 8px);
-    left: 12%;
+    top: calc(50% - 30px);
+    left: -187px;
     transition: .2s;
 
     &:hover {
@@ -56,7 +61,9 @@
     font-size: 1.25rem;
     font-weight: 500;
   }
-
+  &__title-wrapper {
+    position: relative;
+  }
   &__title {
     margin: 18px 0 64px;
 
@@ -180,5 +187,10 @@
       font-size: 1.5rem;
       margin-bottom: 40px;
     }
+  }
+}
+.blog-article-recommended {
+  .swiper-scrollbar {
+    background-color: #fff;
   }
 }
