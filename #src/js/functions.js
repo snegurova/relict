@@ -613,3 +613,117 @@ animate({
             Element.prototype.msMatchesSelector;
     }
 })();
+
+//Ad Products Tabs Control
+const navItems = document.querySelectorAll('.ad-products-tabs__item');
+const bodyItems = document.querySelectorAll('.ad-products-tabs__body-item');
+const navWrapper = document.querySelector('.ad-products-tabs__nav')
+const bodyWrapper = document.querySelector('.ad-products-tabs__body');
+let headerIsOpen = false;
+let visibleItems;
+
+const closeMenu = () => {
+    visibleItems.forEach((elem) => elem.style.top = '0px');
+    navItems.forEach((elem) => elem.classList.remove('ad-products-tabs__item_visible'));
+    headerIsOpen = false;
+}
+
+(function () {
+    navItems.forEach((elem, i) => elem.addEventListener('click', (e) => selectTab(e, i)));
+
+    const itemIsHeader = (e) => {
+        return e.target.classList === 'ad-products-tabs__item_header' || e.target.closest('.ad-products-tabs__item_header')
+    }
+
+    const itemIsNav = (e) => {
+        if (itemIsHeader(e)) return false
+        return e.target.classList === 'ad-products-tabs__item' || e.target.closest('.ad-products-tabs__item')
+    }
+
+    const selectTab = (e, i) => {
+        const currentBodyItemHeight = bodyItems[i].offsetHeight;
+
+        if (window.innerWidth > 1100) {
+            e.preventDefault();
+            navItems.forEach((elem) => elem.classList.remove('ad-products-tabs__item_active', 'ad-products-tabs__item_header'))
+            bodyItems.forEach((elem) => elem.classList.remove('ad-products-tabs__body-item_active'))
+            if (e.target.classList === 'ad-products-tabs__item') {
+                e.target.classList.add('ad-products-tabs__item_active', 'ad-products-tabs__item_header');
+            } else {
+                e.target.closest('.ad-products-tabs__item').classList.add('ad-products-tabs__item_active', 'ad-products-tabs__item_header');
+            }
+
+            bodyWrapper.style.height = `${currentBodyItemHeight}px`
+            bodyItems[i].classList.add('ad-products-tabs__body-item_active');
+        } else {
+            if (itemIsHeader(e)) {
+                navItems.forEach((elem) => {
+                    if (!elem.classList.contains('ad-products-tabs__item_header') || !elem.closest('.ad-products-tabs__item_header')) {
+                        elem.classList.toggle('ad-products-tabs__item_visible')
+                    }
+                });
+                visibleItems = document.querySelectorAll('.ad-products-tabs__item_visible');
+                if (headerIsOpen) {
+                    visibleItems.forEach((elem, i) => elem.style.top = '0px')
+                } else {
+                    visibleItems.forEach((elem, i) => elem.style.top = `${elem.offsetHeight * (i + 1)}px`)
+                }
+                headerIsOpen = !headerIsOpen;
+            } else if (itemIsNav(e)) {
+                if (e.target.classList.contains('ad-products-tabs__item')) {
+                    visibleItems = document.querySelectorAll('.ad-products-tabs__item_visible');
+                    visibleItems.forEach((elem, i) => elem.style.top = '0px')
+                    navItems.forEach((elem) => elem.classList.remove('ad-products-tabs__item_header', 'ad-products-tabs__item_active'));
+                    e.target.classList.add('ad-products-tabs__item_header', 'ad-products-tabs__item_active');
+                } else {
+                    visibleItems = document.querySelectorAll('.ad-products-tabs__item_visible');
+                    visibleItems.forEach((elem, i) => elem.style.top = '0px')
+                    navItems.forEach((elem) => elem.classList.remove('ad-products-tabs__item_header', 'ad-products-tabs__item_active'));
+                    e.target.closest('.ad-products-tabs__item').classList.add('ad-products-tabs__item_header', 'ad-products-tabs__item_active');
+                }
+
+                navItems.forEach((elem) => elem.classList.remove('ad-products-tabs__item_visible'));
+                bodyItems.forEach((elem) => elem.classList.remove('ad-products-tabs__body-item_active'));
+                bodyWrapper.style.height = `${currentBodyItemHeight}px`
+                bodyItems[i].classList.add('ad-products-tabs__body-item_active');
+                headerIsOpen = !headerIsOpen;
+            }
+        }
+    }
+
+})();
+
+// //Ad Products Change Body Height Onresize
+(function () {
+    const bodyWrapper = document.querySelector('.ad-products-tabs__body');
+    const activeTab = document.querySelector('.ad-products-tabs__body-item_active');
+
+    window.addEventListener('resize', function(event) {
+        bodyWrapper.style.height = `${activeTab.offsetHeight}px`;
+        closeMenu();
+    }, true)
+
+})();
+
+//Ad Products Tabs Init Body Height
+(function () {
+    const bodyWrapper = document.querySelector('.ad-products-tabs__body');
+
+    if (bodyWrapper) {
+        const currentFirstItemHeight = document.querySelector('.ad-products-tabs__body-item').offsetHeight;
+        bodyWrapper.style.height = `${currentFirstItemHeight}px`;
+    }
+})();
+
+
+//Ad Products Selector Close On Click Outside
+(function () {
+    document.addEventListener('click', (e) => checkOutsideClick(e))
+
+    const checkOutsideClick = ({ target }) => {
+        const isTabs = target === navWrapper || navWrapper && navWrapper.contains(target);
+        if (!isTabs && headerIsOpen) {
+            closeMenu();
+        }
+    }
+})();

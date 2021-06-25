@@ -29,6 +29,7 @@
     -moz-border-radius: 25px;
     border-radius: 25px;
     backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
   }
   &__right {
     display: flex;

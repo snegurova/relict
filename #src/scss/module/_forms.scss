@@ -42,11 +42,9 @@ textarea {
     color: #8d99a6;
     font-size: 1.125rem;
   }
-  &:focus-visible {
-    outline: none;
-  }
-  &.focus-visible {
+  &._focus {
     border: 1px solid $primary-btn-color;
+    outline: none;
   }
   &_full-width {
     width: 100%;
