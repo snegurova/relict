@@ -6,7 +6,13 @@
                 <div class="footer__top-left">
                 <ul class="footer__logo-list">
                   <li class="footer__logo-list-item"><a href="#" class="footer__logo-link">
+                    
+                    @@if (modifier === '' ) {
+                    <img src="./img/logo-dark.svg" alt="">
+                    }
+                    @@if (modifier === 'footer_light' ) {
                     <img src="./img/logo.svg" alt="">
+                    }
                   </a></li>
                   <li class="footer__logo-list-item"><a href="#" class="footer__logo-link">
                     <img src="./img/google-logo.png" alt="">
