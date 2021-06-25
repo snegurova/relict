@@ -1,0 +1,10 @@
+.contact-us-page {
+  padding: 82px 0 70px;
+  display: flex;
+  justify-content: space-between;
+  .contact-us__form {
+    flex-shrink: 0;
+    min-width: 630px;
+    margin-left: 110px;
+  }
+}
