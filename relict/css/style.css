@@ -858,6 +858,10 @@ body._touch .header__nav-list > li._active .menu__sub-list {
   background-color: #CFD9E3;
 }
 
+.blog-posts__slide.swiper-slide {
+  border-radius: 20px;
+}
+
 .tab__item {
   display: none;
 }
@@ -997,7 +1001,6 @@ body._touch .header__nav-list > li._active .menu__sub-list {
   position: relative;
   transition-property: transform;
   background-color: #fff;
-  border-radius: 20px;
 }
 
 .swiper-slide-invisible-blank {
@@ -3174,18 +3177,6 @@ body {
 
 img {
   max-width: 100%;
-}
-
-.pt-45 {
-  padding-top: 45px;
-}
-
-.mt-45 {
-  margin-top: 45px;
-}
-
-.mt-60 {
-  margin-top: 60px;
 }
 
 /*# sourceMappingURL=../maps/style.css.map */
