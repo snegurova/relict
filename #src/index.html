@@ -402,43 +402,9 @@
         <div class="contact-us__subtitle">
           Let’s Talk!
         </div>
-        <form action="" class="contact-us__form">
-          <div class="input-form__wrapper">
-            <label class="input-form__label" for="name">Full Name:</label>
-            <input class="form-input form-input_full-width" id="name" type="text"
-                   data-error="" data-value="" placeholder="John Doe">
-          </div>
-          <div class="input-form__wrapper">
-            <label class="input-form__label" for="email">Email Address:</label>
-            <input class="form-input form-input_full-width" id="email" type="email"
-                   data-error="" data-value="" placeholder="youremail@mail.com">
-          </div>
-          <div class="select_wrapper">
-            <label class="input-form__label" for="im">I am a:</label>
-            <select name="form" id="im" class="select_im" data-default="Option 1">
-              <option value="option1" selected="selected">Option 1</option>
-              <option value="option2">Option 2</option>
-              <option value="option3">Option 3</option>
-              <option value="option4">Option 4</option>
-            </select>
-          </div>
-          <div class="input-form__wrapper">
-            <label class="input-form__label" for="url">Website URL / App Store URL:</label>
-            <input class="form-input form-input_full-width" id="url" type="email"
-                   data-error="" data-value="" placeholder="url">
-          </div>
-          <div class="select_wrapper">
-            <label class="input-form__label" for="package">Package:</label>
-            <select name="form" id="package" class="select_im" data-default="Rising Star">
-              <option value="option1" selected="selected">
-                Rising Star
-              </option>
-              <option value="option2">Professional</option>
-              <option value="option3">Premium</option>
-            </select>
-          </div>
-          <button class="btn btn_submit-full">Submit</button>
-        </form>
+        @@include('_contact-form.html',{
+        modifier: ""
+        })
       </div>
     </section>
   </main>
