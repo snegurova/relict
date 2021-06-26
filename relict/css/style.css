@@ -3140,6 +3140,52 @@ textarea {
   text-align: left;
 }
 
+.svg__shapes_right.svg__shapes_right-contact-us .svg_top {
+  top: calc(-255px - 840 * (100vw - 1280px) / (2560 - 1280));
+  left: calc(-630px - 310 * (100vw - 1280px) / (2560 - 1280));
+  width: calc(901px + 901 * (100vw - 1280px) / (2560 - 1280));
+  height: calc(905px + 905 * (100vw - 1280px) / (2560 - 1280));
+}
+
+.svg__shapes_right.svg__shapes_right-contact-us .svg_bottom {
+  top: calc(250px - 551 * (100vw - 1280px) / (2560 - 1280));
+  left: calc(-440px - 230 * (100vw - 1280px) / (2560 - 1280));
+  width: calc(618px + 618 * (100vw - 1280px) / (2560 - 1280));
+  height: calc(1127px + 1127 * (100vw - 1280px) / (2560 - 1280));
+}
+
+@media screen and (max-width: 900px) {
+  .svg__shapes_right.svg__shapes_right-contact-us .svg {
+    display: none;
+  }
+}
+
+.svg__lines-contact-us .line__top {
+  top: calc(-697px - 776 * (100vw - 320px) / (2560 - 320));
+  left: calc(185px - -1805 * (100vw - 320px) / (2560 - 320));
+  width: calc(782px + 782 * (100vw - 320px) / (2560 - 320));
+  height: calc(1142px + 1142 * (100vw - 320px) / (2560 - 320));
+}
+
+@media screen and (min-width: 900px) {
+  .svg__lines-contact-us .line__top {
+    display: none;
+  }
+}
+
+.svg__lines-contact-us .line__bottom {
+  top: calc(-648px - 730 * (100vw - 320px) / (2560 - 320));
+  left: calc(204px - -1816 * (100vw - 320px) / (2560 - 320));
+  width: calc(782px + 782 * (100vw - 320px) / (2560 - 320));
+  height: calc(1142px + 1142 * (100vw - 320px) / (2560 - 320));
+}
+
+@media screen and (min-width: 900px) {
+  .svg__lines-contact-us .line__bottom {
+    display: none;
+  }
+}
+
 .solution-ad-products {
   padding: 106px 78px 90px;
 }
