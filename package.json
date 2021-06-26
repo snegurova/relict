@@ -19,7 +19,7 @@
 		"gulp-plumber": "latest",
 		"gulp-rename": "latest",
 		"gulp-replace": "^1.0.0",
-		"gulp-sass": "latest",
+		"gulp-sass": "6.14.13",
 		"gulp-svg-sprite": "latest",
 		"gulp-uglify-es": "latest",
 		"gulp-webp-html": "latest",
