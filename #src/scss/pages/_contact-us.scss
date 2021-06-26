@@ -2,9 +2,37 @@
   padding: 82px 0 70px;
   display: flex;
   justify-content: space-between;
-  .contact-us__form {
-    flex-shrink: 0;
-    min-width: 630px;
-    margin-left: 110px;
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+    padding-top: 14px;
+  }
+  .contact-us {
+    &__form {
+      flex-shrink: 0;
+      min-width: 630px;
+      margin-left: 110px;
+      margin-top: 12px;
+      @media screen and (max-width: 992px) {
+        margin-left: auto;
+      }
+      @media screen and (max-width: 700px) {
+        min-width: 100%;
+      }
+    }
+    &__subtitle, &__title {
+      text-align: left;
+    }
+    &__subtitle {
+      margin-bottom: 44px;
+      @media screen and (max-width: 992px) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.contact-us {
+  &__left {
+    text-align: left;
   }
 }
