@@ -3482,6 +3482,10 @@ textarea {
   text-align: center;
 }
 
+.svg__lines.svg__lines-contact-us {
+  z-index: -1;
+}
+
 .svg__lines_right-solution .line__top {
   top: calc(-1490px - 1350 * (100vw - 1280px) / (2560 - 1280));
   left: calc(-1135px - 820 * (100vw - 1280px) / (2560 - 1280));
