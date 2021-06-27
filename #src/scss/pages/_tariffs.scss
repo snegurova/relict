@@ -1,0 +1,141 @@
+.tariffs__nav {
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+
+.tariffs-table {
+  margin: 0 auto 29px;
+  max-width: 1066px;
+  background-color: #F6F7FA;
+  border-radius: 10px 10px 5px;
+
+  &__header {
+    display: flex;
+    background-color: #01CB9D;
+    border-radius: 10px 10px 0;
+  }
+
+  &__preheader {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    padding: 24px 0;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 1%;
+      height: 1px;
+      width: 98%;
+      background-color: #DADEE9;
+    }
+  }
+
+  ._item__footer {
+    padding: 0;
+  }
+
+  &__options {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__option {
+    display: flex;
+  }
+
+  &__icons {
+    display: flex;
+    flex: 1;
+
+    & > picture,
+    & > span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(100% / 3);
+    }
+
+    & > span {
+      font-size: 1.25rem;
+      font-weight: 400;
+      padding: 6px 0;
+    }
+  }
+
+  &__titles {
+    display: flex;
+    align-items: center;
+    width: 38%;
+  }
+
+  ._title-main {
+    padding: 9px 0 9px 44px;
+    width: 38%;
+    background-color: #DEF3F1;
+    border-top-left-radius: 10px;
+    font-size: 1.25rem;
+  }
+
+  ._title-primary {
+    flex: 1;
+    padding: 9px 0;
+    background-color: #01CB9D;
+    color: #FFF;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+
+      &:last-child {
+        border-top-right-radius: 10px;
+      }
+  }
+
+  ._title-secondary {
+    align-self: center;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    width: 18.19%;
+  }
+
+  ._subtitle-main {
+    padding: 49px 0 27px 44px;
+    width: 38%;
+  }
+
+  ._subtitle-primary {
+    flex: 1;
+    padding: 46px 0 24px;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #01CB9D;
+  }
+
+  ._subtitle-secondary {
+    font-size: 1.25rem;
+    font-weight: 400;
+    padding: 6px 0;
+    width: 24.16%;
+  }
+
+  ._subtitle_footer {
+    font-size: 1.25rem;
+    font-weight: 700;
+    width: 37.99%;
+    padding: 6px 0;
+    text-align: center;
+  }
+}
+
+.tariffs__footnote {
+  max-width: 1066px;
+  margin: 0 auto 70px;
+  font-size: 0.875rem;
+}
