@@ -86,6 +86,7 @@ if (menuLinks.length > 0) {
 }
 //=================
 
+
 //BodyLock
 function body_lock(delay) {
     let body = document.querySelector("body");
@@ -617,8 +618,9 @@ animate({
 //Ad Products Tabs Control
 const navItems = document.querySelectorAll('.ad-products-tabs__item');
 const bodyItems = document.querySelectorAll('.ad-products-tabs__body-item');
-const navWrapper = document.querySelector('.ad-products-tabs__nav')
+const navWrapper = document.querySelector('.ad-products-tabs__nav');
 const bodyWrapper = document.querySelector('.ad-products-tabs__body');
+const menuButton = document.querySelector('.ad-products-tabs__button');
 let headerIsOpen = false;
 let visibleItems;
 
@@ -662,7 +664,8 @@ const changeTabsHeaderBorder = (elem) => {
 
 (function () {
     navItems.forEach((elem, i) => elem.addEventListener('click', (e) => selectTab(e, i)));
-    
+    menuButton && menuButton.addEventListener('click', (e) => selectTab(e, 0));
+
     const itemIsHeader = (e) => {
         return e.target.classList === 'ad-products-tabs__item_header' || e.target.closest('.ad-products-tabs__item_header')
     }
@@ -690,7 +693,7 @@ const changeTabsHeaderBorder = (elem) => {
             bodyWrapper.style.height = `${currentBodyItemHeight}px`;
             bodyItems[i].classList.add('ad-products-tabs__body-item_active');
         } else {
-            if (itemIsHeader(e)) {
+            if (itemIsHeader(e) || e.target.classList.contains('ad-products-tabs__button')) {
                 navItems.forEach((elem) => {
                     if (!elem.classList.contains('ad-products-tabs__item_header') || !elem.closest('.ad-products-tabs__item_header')) {
                         elem.classList.toggle('ad-products-tabs__item_visible');
@@ -730,12 +733,13 @@ const changeTabsHeaderBorder = (elem) => {
 (function () {
     const bodyWrapper = document.querySelector('.ad-products-tabs__body');
     const activeTab = document.querySelector('.ad-products-tabs__body-item_active');
-    
-    window.addEventListener('resize', function(event) {
-        bodyWrapper.style.height = `${activeTab.offsetHeight}px`;
-        closeMenu();
-    }, true)
-    
+
+    if (bodyWrapper) {
+        window.addEventListener('resize', function(event) {
+            bodyWrapper.style.height = `${activeTab.offsetHeight}px`;
+            closeMenu();
+        }, true)
+    }
 })();
 
 //Ad Products Tabs Init Body Height
