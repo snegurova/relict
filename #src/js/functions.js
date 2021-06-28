@@ -758,20 +758,16 @@ const changeTabsHeaderBorder = (elem) => {
 
     const openMenu = () => {
         if (!menuIsOpen) {
-            const shareBodyHeight = shareBody.offsetHeight;
             shareBody.classList.add('blog-article-post__distribute-body_active');
             shareHeader.classList.add('blog-article-post__share_disabled');
-            shareWrapper.style.height = `${shareWrapper.offsetHeight + shareBodyHeight}px`;
             menuIsOpen = !menuIsOpen;
         }
     }
 
     const closeMenu = () => {
         if (menuIsOpen) {
-            const shareBodyHeight = shareBody.offsetHeight;
             shareBody.classList.remove('blog-article-post__distribute-body_active')
             shareHeader.classList.remove('blog-article-post__share_disabled');
-            shareWrapper.style.height = `${shareWrapper.offsetHeight - shareBodyHeight}px`;
             menuIsOpen = !menuIsOpen;
         }
     }
