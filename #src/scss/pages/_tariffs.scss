@@ -224,6 +224,9 @@
   &_slider {
     padding: 25px 5px 20px;
     background-color: #F6F7FA;
+    @media screen and (max-width: 1000px) {
+      padding-top: 29px;
+    }
   }
 }
 

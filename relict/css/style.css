@@ -3792,6 +3792,12 @@ textarea {
   background-color: #F6F7FA;
 }
 
+@media screen and (max-width: 1000px) {
+  ._subtitle-primary_slider {
+    padding-top: 29px;
+  }
+}
+
 ._subtitle-secondary {
   font-size: 1.25rem;
   font-weight: 400;
