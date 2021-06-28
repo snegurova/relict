@@ -769,3 +769,38 @@ const changeTabsHeaderBorder = (elem) => {
         }
     }
 })();
+
+// Blog-article Share Menu
+(function () {
+    const shareHeader = document.querySelector('.blog-article-post__share');
+    const shareCancelButton = document.querySelector('.blog-article-post__cancel');
+    const shareWrapper = document.querySelector('.blog-article-post__distribute');
+    const shareBody = document.querySelector('.blog-article-post__distribute-body');
+    let menuIsOpen = false;
+
+    if (shareWrapper) shareWrapper.style.height = `${shareWrapper.offsetHeight}px`;
+
+    const openMenu = () => {
+        if (!menuIsOpen) {
+            const shareBodyHeight = shareBody.offsetHeight;
+            shareBody.classList.add('blog-article-post__distribute-body_active');
+            shareHeader.classList.add('blog-article-post__share_disabled');
+            shareWrapper.style.height = `${shareWrapper.offsetHeight + shareBodyHeight}px`;
+            menuIsOpen = !menuIsOpen;
+        }
+    }
+
+    const closeMenu = () => {
+        if (menuIsOpen) {
+            const shareBodyHeight = shareBody.offsetHeight;
+            shareBody.classList.remove('blog-article-post__distribute-body_active')
+            shareHeader.classList.remove('blog-article-post__share_disabled');
+            shareWrapper.style.height = `${shareWrapper.offsetHeight - shareBodyHeight}px`;
+            menuIsOpen = !menuIsOpen;
+        }
+    }
+
+
+    if (shareHeader) shareHeader.addEventListener('click', (e) => openMenu(e));
+    if (shareCancelButton) shareCancelButton.addEventListener('click', (e) => closeMenu(e));
+})();

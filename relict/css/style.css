@@ -3018,11 +3018,16 @@ textarea {
   width: 100%;
   border-radius: 10px;
   background-color: #F7F8FB;
-  text-decoration: none;
-  color: #030F29;
+  transition: .4s;
+  cursor: pointer;
 }
 
-.blog-article-post__share:hover > * {
+.blog-article-post__share_disabled {
+  filter: opacity(50%);
+  cursor: not-allowed;
+}
+
+.blog-article-post__share:not(.blog-article-post__share_disabled):hover > * {
   filter: opacity(50%);
 }
 
@@ -3033,7 +3038,7 @@ textarea {
 }
 
 .blog-article-post__share-icon {
-  margin-right: 20px;
+  margin: 0 20px 0 0;
   transition: .2s;
 }
 
@@ -3045,6 +3050,89 @@ textarea {
   font-size: 18px;
   font-weight: 500;
   transition: .2s;
+}
+
+.blog-article-post__distribute {
+  position: relative;
+  transition: .4s;
+  height: auto;
+}
+
+.blog-article-post__distribute-body {
+  position: absolute;
+  content: '';
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: .4s;
+}
+
+.blog-article-post__distribute-body_active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  top: 143px;
+}
+
+.blog-article-post__cancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 47px;
+  padding: 16px 0;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #F7F8FB;
+  cursor: pointer;
+}
+
+.blog-article-post__cancel:hover > * {
+  filter: opacity(50%);
+}
+
+@media screen and (max-width: 560px) {
+  .blog-article-post__cancel {
+    margin-top: 36px;
+  }
+}
+
+.blog-article-post__cancel-icon {
+  margin: 0;
+  transition: .2s;
+}
+
+.blog-article-post__cancel-icon img {
+  display: block;
+}
+
+.blog-article-post__icon-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 100px;
+  width: 100%;
+}
+
+@media screen and (max-width: 560px) {
+  .blog-article-post__icon-group {
+    padding: 24px 20px;
+  }
+}
+
+.blog-article-post__icon-group > a {
+  transition: .4s;
+}
+
+@media screen and (max-width: 560px) {
+  .blog-article-post__icon-group > a:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.blog-article-post__icon-group > a:hover {
+  filter: opacity(50%);
 }
 
 .blog-article-recommended {
@@ -3670,13 +3758,13 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
   background-color: #01CB9D;
   border-radius: 10px;
   transition: .4s;
 }
 
 .tariffs-slider__control > picture > img {
+  padding: 0 10px;
   transition: .4s;
 }
 

@@ -104,13 +104,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
     background-color: #01CB9D;
     border-radius: 10px;
     transition: .4s;
 
     & > picture > img {
+      padding: 0 10px;
       transition: .4s;
+
       &:not(.swiper-button-disabled):hover {
         cursor: pointer;
         filter: opacity(50%);

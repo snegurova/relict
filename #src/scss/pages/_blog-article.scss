@@ -133,8 +133,72 @@
     width: 100%;
     border-radius: 10px;
     background-color: #F7F8FB;
-    text-decoration: none;
-    color: #030F29;
+    transition: .4s;
+    cursor: pointer;
+
+    &_disabled {
+      filter: opacity(50%);
+      cursor: not-allowed;
+    }
+
+    &:not(.blog-article-post__share_disabled):hover > * {
+      filter: opacity(50%);
+    }
+
+    @media screen and (max-width: 560px){
+      margin-top: 36px;
+    }
+
+    &-icon {
+      margin: 0 20px 0 0;
+      transition: .2s;
+      img {
+        display: block;
+      }
+    }
+
+    &-title {
+      font-size: 18px;
+      font-weight: 500;
+      transition: .2s;
+    }
+  }
+
+  &__distribute {
+    position: relative;
+    transition: .4s;
+    height: auto;
+
+    &-body {
+      position: absolute;
+      content: '';
+      visibility: hidden;
+      opacity: 0;
+      transform: scale(0);
+      width: 100%;
+      top: 0;
+      left: 0;
+      transition: .4s;
+
+      &_active {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+        top: 143px;
+      }
+    }
+  }
+
+  &__cancel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 47px;
+    padding: 16px 0;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #F7F8FB;
+    cursor: pointer;
 
     &:hover > * {
       filter: opacity(50%);
@@ -145,16 +209,38 @@
     }
 
     &-icon {
-      margin-right: 20px;
+      margin: 0;
       transition: .2s;
+
       img {
         display: block;
       }
     }
-    &-title {
-      font-size: 18px;
-      font-weight: 500;
-      transition: .2s;
+  }
+
+  &__icon-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 100px;
+    width: 100%;
+
+
+    @media screen and (max-width: 560px){
+      padding: 24px 20px;
+    }
+
+    & > a {
+      transition: .4s;
+
+      @media screen and (max-width: 560px){
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+
+      &:hover {
+        filter: opacity(50%);
+      }
     }
   }
 }
