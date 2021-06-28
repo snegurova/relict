@@ -894,6 +894,18 @@ body._touch .header__nav-list > li._active .menu__sub-list {
   opacity: 1;
 }
 
+._animated-letter {
+  display: inline-block;
+  transform: translate(0px, 40px);
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+
+._animated-letter._fade-up {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
 .swiper-scrollbar {
   border-radius: 10px;
   position: relative;

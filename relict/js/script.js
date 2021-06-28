@@ -202,31 +202,7 @@ if (location.hash) {
 }
 //=================
 
-// LettersAnimation
-let title = document.querySelectorAll('._letter-animation');
-if (title) {
-    for (let index = 0; index < title.length; index++) {
-        let el = title[index];
-        let txt = el.innerHTML;
-        let txt_words = txt.replace('  ', ' ').split(' ');
-        let new_title = '';
-        for (let index = 0; index < txt_words.length; index++) {
-            let txt_word = txt_words[index];
-            let len = txt_word.length;
-            new_title = new_title + '<p>';
-            for (let index = 0; index < len; index++) {
-                let it = txt_word.substr(index, 1);
-                if (it == ' ') {
-                    it = '&nbsp;';
-                }
-                new_title = new_title + '<span>' + it + '</span>';
-            }
-            el.innerHTML = new_title;
-            new_title = new_title + '&nbsp;</p>';
-        }
-    }
-}
-//=================
+
 //Tabs
 let tabs = document.querySelectorAll("._tabs");
 const tabSlider = document.querySelector(".tab-slider");
@@ -11518,6 +11494,52 @@ radioButtons.forEach((radioButton) => {
   });
 });
 
+// LettersAnimation
+
+const textToAnimate = document.querySelectorAll('._animated-letters');
+const lettersSetsToAnimate = [];
+if (textToAnimate) {
+  textToAnimate.forEach(el => lettersSetsToAnimate.push(el.textContent.split('')));
+}
+
+lettersSetsToAnimate.forEach((set, i) => {
+  textToAnimate[i].innerHTML = '';
+  set.forEach(letter => {
+    if (letter === ' ') {
+      letter = '&nbsp;';
+    }
+    textToAnimate[i].innerHTML += `<span class="_animated-letter">${letter}</span>`
+  });
+});
+
+let char = 0;
+const chars = document.querySelectorAll('._animated-letter');
+const subtitle = document.querySelector('._after-letters-animation');
+
+let timer = setInterval(onTick, 50);
+
+function onTick() {
+  const span = chars[char];
+  span.classList.add('_fade-up');
+  char++;
+  if (char === chars.length) {
+    complete();
+    return;
+  }
+}
+
+function complete() {
+  clearInterval(timer);
+  subtitle.classList.add('_active');
+}
+
+
+
+
+
+console.log(textToAnimate);
+
+//=================
 // Dynamic Adapt v.1
 // HTML data-da="where(uniq class name),when(breakpoint),position(digi)"
 // e.x. data-da=".item,992,2"
