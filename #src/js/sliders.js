@@ -1,5 +1,5 @@
 @@include('./libs/swiper-bundle.js', {})
-  
+
   /*------
    Sliders
   --------*/
@@ -43,6 +43,8 @@ const rateWebSlider = new Swiper('.rate-web__slider', {
     el: '.rate-web__swiper-pagination',
     clickable: true,
   },
+  observer: true,
+  observeParents: true,
   breakpoints: {
     // when window width is >= 320px
     320: {
@@ -67,6 +69,8 @@ const rateAppSlider = new Swiper('.rate-app__slider', {
     el: '.rate-app__swiper-pagination',
     clickable: true,
   },
+  observer: true,
+  observeParents: true,
   breakpoints: {
     // when window width is >= 320px
     320: {
@@ -107,3 +111,53 @@ const blogPostsSlider = new Swiper('.blog-posts__slider', {
     }
   }
 });
+
+const tariffsWebSlider = new Swiper('.tariffs-web__slider', {
+  // Optional parameters
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  observer: true,
+  observeParents: true,
+  navigation: {
+    nextEl: '.tariffs-web__button_next',
+    prevEl: '.tariffs-web__button_prev',
+  },
+});
+
+const tariffsAppSlider = new Swiper('.tariffs-app__slider', {
+  // Optional parameters
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  observer: true,
+  observeParents: true,
+  navigation: {
+    nextEl: '.tariffs-app__button_next',
+    prevEl: '.tariffs-app__button_prev',
+  },
+});
+
+const tariffsWebControlSlider = new Swiper('.tariffs-web__control-slider', {
+  // Optional parameters
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  observer: true,
+  observeParents: true,
+});
+
+tariffsWebControlSlider.controller.control = tariffsWebSlider;
+tariffsWebSlider.controller.control = tariffsWebControlSlider;
+
+const tariffsAppControlSlider = new Swiper('.tariffs-app__control-slider', {
+  // Optional parameters
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  observer: true,
+  observeParents: true,
+});
+
+tariffsAppControlSlider.controller.control = tariffsAppSlider;
+tariffsAppSlider.controller.control = tariffsAppControlSlider;

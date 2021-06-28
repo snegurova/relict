@@ -2597,7 +2597,7 @@ textarea {
   position: absolute;
   top: 4px;
   left: 5px;
-  width: 170px;
+  width: 171px;
   height: calc(100% - 8px);
   border-radius: 25px;
   background-color: #E9E9F0;
@@ -3192,7 +3192,7 @@ textarea {
 
 @media screen and (max-width: 1200px) {
   .solution-ad-products {
-    padding: 106px 0 84px;
+    padding: 0 0 84px;
   }
 }
 
@@ -3567,10 +3567,17 @@ textarea {
 }
 
 .tariffs-table {
+  display: block;
   margin: 0 auto 29px;
   max-width: 1066px;
   background-color: #F6F7FA;
   border-radius: 10px 10px 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .tariffs-table {
+    display: none;
+  }
 }
 
 .tariffs-table__header {
@@ -3639,7 +3646,99 @@ textarea {
   width: 38%;
 }
 
-.tariffs-table ._title-main {
+.tariffs-slider {
+  display: none;
+  margin-bottom: 29px;
+  padding: 8px 8px 20px;
+  background-color: #F6F7FA;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .tariffs-slider {
+    display: block;
+  }
+}
+
+.tariffs-slider__control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #01CB9D;
+  border-radius: 10px;
+  transition: .4s;
+}
+
+.tariffs-slider__control > picture > img {
+  transition: .4s;
+}
+
+.tariffs-slider__control > picture > img:not(.swiper-button-disabled):hover {
+  cursor: pointer;
+  filter: opacity(50%);
+}
+
+.tariffs-slider__control > picture > img > img {
+  display: block;
+}
+
+.tariffs-slider__control .swiper-button-disabled {
+  filter: opacity(50%);
+  cursor: not-allowed;
+}
+
+.tariffs-slider__title {
+  width: 80%;
+}
+
+.tariffs-slider__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 10px;
+  background-color: #F6F7FA;
+}
+
+.tariffs-slider__item:not(:last-child):before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 1%;
+  height: 1px;
+  width: 98%;
+  background-color: #DADEE9;
+}
+
+.tariffs-slider__item-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.tariffs-slider__item > picture {
+  padding-top: 12px;
+}
+
+.tariffs-slider__item-description {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #86A3C0;
+}
+
+.tariffs__footnote {
+  max-width: 1066px;
+  margin: 0 auto 70px;
+  font-size: 0.875rem;
+}
+
+._tabs__body_full-width {
+  width: 100%;
+}
+
+._title-main {
   padding: 9px 0 9px 44px;
   width: 38%;
   background-color: #DEF3F1;
@@ -3647,7 +3746,7 @@ textarea {
   font-size: 1.25rem;
 }
 
-.tariffs-table ._title-primary {
+._title-primary {
   flex: 1;
   padding: 9px 0;
   background-color: #01CB9D;
@@ -3657,11 +3756,11 @@ textarea {
   font-weight: 700;
 }
 
-.tariffs-table ._title-primary:last-child {
+._title-primary:last-child {
   border-top-right-radius: 10px;
 }
 
-.tariffs-table ._title-secondary {
+._title-secondary {
   align-self: center;
   text-align: center;
   font-size: 1.25rem;
@@ -3669,27 +3768,37 @@ textarea {
   width: 18.19%;
 }
 
-.tariffs-table ._subtitle-main {
+._subtitle-main {
   padding: 49px 0 27px 44px;
   width: 38%;
 }
 
-.tariffs-table ._subtitle-primary {
+._subtitle-primary {
   flex: 1;
-  padding: 46px 0 24px;
+  padding: 46px 3px 24px;
   text-align: center;
   font-size: 1.25rem;
   color: #01CB9D;
 }
 
-.tariffs-table ._subtitle-secondary {
+._subtitle-primary_slider {
+  padding: 25px 5px 20px;
+  background-color: #F6F7FA;
+}
+
+._subtitle-secondary {
   font-size: 1.25rem;
   font-weight: 400;
   padding: 6px 0;
   width: 24.16%;
 }
 
-.tariffs-table ._subtitle_footer {
+._subtitle-secondary_slider {
+  width: auto;
+  padding: 20px 5px 0;
+}
+
+._subtitle_footer {
   font-size: 1.25rem;
   font-weight: 700;
   width: 37.99%;
@@ -3697,10 +3806,11 @@ textarea {
   text-align: center;
 }
 
-.tariffs__footnote {
-  max-width: 1066px;
-  margin: 0 auto 70px;
-  font-size: 0.875rem;
+.tariffs-web__control-slider .tariffs-web__control-slide,
+.tariffs-web__control-slider .tariffs-app__control-slide,
+.tariffs-app__control-slider .tariffs-web__control-slide,
+.tariffs-app__control-slider .tariffs-app__control-slide {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 * {

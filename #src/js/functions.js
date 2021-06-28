@@ -222,7 +222,7 @@ if (title) {
 //Tabs
 let tabs = document.querySelectorAll("._tabs");
 const tabSlider = document.querySelector(".tab-slider");
-const sliderWidth =  170;
+const sliderWidth =  172;
 for (let index = 0; index < tabs.length; index++) {
     let tab = tabs[index];
     let tabs_items = tab.querySelectorAll("._tabs-item");
@@ -236,7 +236,7 @@ for (let index = 0; index < tabs.length; index++) {
                 tabs_blocks[index].classList.remove('_active');
             }
             tabs_item.classList.add('_active');
-            tabSlider.style.left = (sliderWidth * index + 4) + 'px';
+            tabSlider.style.left = (sliderWidth * index + 5) + 'px';
             tabs_blocks[index].classList.add('_active');
             e.preventDefault();
         });

@@ -4,10 +4,15 @@
 }
 
 .tariffs-table {
+  display: block;
   margin: 0 auto 29px;
   max-width: 1066px;
   background-color: #F6F7FA;
   border-radius: 10px 10px 5px;
+
+  @media screen and (max-width: 1000px){
+    display: none;
+  }
 
   &__header {
     display: flex;
@@ -74,63 +79,87 @@
     align-items: center;
     width: 38%;
   }
+}
 
-  ._title-main {
-    padding: 9px 0 9px 44px;
-    width: 38%;
-    background-color: #DEF3F1;
-    border-top-left-radius: 10px;
-    font-size: 1.25rem;
+.tariffs-swiper {}
+
+.tariffs-slider {
+  display: none;
+  margin-bottom: 29px;
+  padding: 8px 8px 20px;
+  background-color: #F6F7FA;
+  border-radius: 10px;
+
+
+  @media screen and (max-width: 1000px){
+    display: block;
   }
 
-  ._title-primary {
-    flex: 1;
-    padding: 9px 0;
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
     background-color: #01CB9D;
-    color: #FFF;
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 700;
+    border-radius: 10px;
+    transition: .4s;
 
-      &:last-child {
-        border-top-right-radius: 10px;
+    & > picture > img {
+      transition: .4s;
+      &:not(.swiper-button-disabled):hover {
+        cursor: pointer;
+        filter: opacity(50%);
       }
+
+      & > img {
+        display: block;
+      }
+    }
+
+    .swiper-button-disabled {
+      filter: opacity(50%);
+      cursor: not-allowed;
+    }
   }
 
-  ._title-secondary {
-    align-self: center;
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 600;
-    width: 18.19%;
+  &__title {
+    width: 80%;
   }
 
-  ._subtitle-main {
-    padding: 49px 0 27px 44px;
-    width: 38%;
-  }
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
+    background-color: #F6F7FA;
 
-  ._subtitle-primary {
-    flex: 1;
-    padding: 46px 0 24px;
-    text-align: center;
-    font-size: 1.25rem;
-    color: #01CB9D;
-  }
+    &:not(:last-child):before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 1%;
+      height: 1px;
+      width: 98%;
+      background-color: #DADEE9;
+    }
 
-  ._subtitle-secondary {
-    font-size: 1.25rem;
-    font-weight: 400;
-    padding: 6px 0;
-    width: 24.16%;
-  }
+    &-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
 
-  ._subtitle_footer {
-    font-size: 1.25rem;
-    font-weight: 700;
-    width: 37.99%;
-    padding: 6px 0;
-    text-align: center;
+    & > picture {
+      padding-top: 12px;
+    }
+
+    &-description {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #86A3C0;
+    }
   }
 }
 
@@ -138,4 +167,86 @@
   max-width: 1066px;
   margin: 0 auto 70px;
   font-size: 0.875rem;
+}
+
+._tabs__body_full-width {
+  width: 100%;
+}
+
+
+._title-main {
+  padding: 9px 0 9px 44px;
+  width: 38%;
+  background-color: #DEF3F1;
+  border-top-left-radius: 10px;
+  font-size: 1.25rem;
+}
+
+._title-primary {
+  flex: 1;
+  padding: 9px 0;
+  background-color: #01CB9D;
+  color: #FFF;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  &:last-child {
+    border-top-right-radius: 10px;
+  }
+}
+
+._title-secondary {
+  align-self: center;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  width: 18.19%;
+}
+
+._subtitle-main {
+  padding: 49px 0 27px 44px;
+  width: 38%;
+}
+
+._subtitle-primary {
+  flex: 1;
+  padding: 46px 3px 24px;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #01CB9D;
+
+  &_slider {
+    padding: 25px 5px 20px;
+    background-color: #F6F7FA;
+  }
+}
+
+._subtitle-secondary {
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding: 6px 0;
+  width: 24.16%;
+
+  &_slider {
+    width: auto;
+    padding: 20px 5px 0;
+  }
+}
+
+._subtitle_footer {
+  font-size: 1.25rem;
+  font-weight: 700;
+  width: 37.99%;
+  padding: 6px 0;
+  text-align: center;
+}
+
+.tariffs-web__control-slider,
+.tariffs-app__control-slider {
+
+  .tariffs-web__control-slide,
+  .tariffs-app__control-slide {
+    background-color: rgba(0,0,0,0);
+  }
 }
