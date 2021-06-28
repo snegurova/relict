@@ -112,10 +112,6 @@
       padding: 0 10px;
       transition: .4s;
 
-      &:not(.swiper-button-disabled):hover {
-        cursor: pointer;
-        filter: opacity(50%);
-      }
 
       & > img {
         display: block;

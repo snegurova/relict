@@ -3768,11 +3768,6 @@ textarea {
   transition: .4s;
 }
 
-.tariffs-slider__control > picture > img:not(.swiper-button-disabled):hover {
-  cursor: pointer;
-  filter: opacity(50%);
-}
-
 .tariffs-slider__control > picture > img > img {
   display: block;
 }
