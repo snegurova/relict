@@ -3027,16 +3027,18 @@ textarea {
   justify-content: center;
   margin-top: 60px;
   padding: 16px 0;
+  visibility: visible;
   width: 100%;
   border-radius: 10px;
   background-color: #F7F8FB;
-  transition: .4s;
+  transition: .6s;
+  opacity: 1;
   cursor: pointer;
 }
 
 .blog-article-post__share_disabled {
-  filter: opacity(50%);
-  cursor: not-allowed;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .blog-article-post__share:not(.blog-article-post__share_disabled):hover > * {
@@ -3066,7 +3068,6 @@ textarea {
 
 .blog-article-post__distribute {
   position: relative;
-  transition: .4s;
   height: auto;
 }
 
@@ -3075,25 +3076,22 @@ textarea {
   content: '';
   visibility: hidden;
   opacity: 0;
-  transform: scale(0);
   width: 100%;
   top: 0;
   left: 0;
-  transition: .4s;
+  transition: .6s;
 }
 
 .blog-article-post__distribute-body_active {
   visibility: visible;
   opacity: 1;
-  transform: scale(1);
-  top: 143px;
 }
 
 .blog-article-post__cancel {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 47px;
+  margin-top: 60px;
   padding: 16px 0;
   width: 100%;
   border-radius: 10px;
