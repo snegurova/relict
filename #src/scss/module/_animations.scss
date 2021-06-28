@@ -13,9 +13,9 @@
 
 ._animated-letter{
   display: inline-block;
-  transform: translate(0px, 40px);
+  transform: translate(0px, 10px);
   opacity: 0;
-  transition: all 0.3s ease 0s;
+  transition: all 0.2s ease 0s;
 }
 
 ._animated-letter._fade-up{

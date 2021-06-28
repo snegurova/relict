@@ -11516,7 +11516,7 @@ let char = 0;
 const chars = document.querySelectorAll('._animated-letter');
 const subtitle = document.querySelector('._after-letters-animation');
 
-let timer = setInterval(onTick, 50);
+let timer = setInterval(onTick, 20);
 
 function onTick() {
   const span = chars[char];
