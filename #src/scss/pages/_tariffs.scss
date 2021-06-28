@@ -53,6 +53,11 @@
 
   &__option {
     display: flex;
+    padding-left: 13px;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: #e6faf5;
+    }
   }
 
   &__icons {
