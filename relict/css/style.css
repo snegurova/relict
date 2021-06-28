@@ -906,6 +906,49 @@ body._touch .header__nav-list > li._active .menu__sub-list {
   opacity: 1;
 }
 
+.promo .container,
+.promo__slogan,
+.svg__lines,
+.promo__description-wrapper,
+.promo__advantages {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.promo .container {
+  transform: scale(1.2);
+  transition: all 1s ease;
+}
+
+.promo__slogan {
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.svg__lines {
+  transition: opacity 1.2s ease 0.6s, visibility 1s ease 0.6s;
+}
+
+.promo__description-wrapper {
+  transition: opacity 1.6s ease 0.9s, visibility 1s ease 0.9s;
+}
+
+.promo__advantages {
+  transition: opacity 2s ease 1.2s, visibility 1s ease 1.2s;
+}
+
+._active.promo .container,
+._active .promo__slogan,
+._active .svg__lines,
+._active .promo__description-wrapper,
+._active .promo__advantages {
+  opacity: 1;
+  visibility: visible;
+}
+
+._active.promo .container {
+  transform: scale(1);
+}
+
 .swiper-scrollbar {
   border-radius: 10px;
   position: relative;
