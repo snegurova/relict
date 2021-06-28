@@ -11512,28 +11512,25 @@ let char = 0;
 const chars = document.querySelectorAll('._animated-letter');
 const subtitle = document.querySelector('._after-letters-animation');
 
-let timer = setInterval(onTick, 20);
-
-function onTick() {
-  const span = chars[char];
-  span.classList.add('_fade-up');
-  char++;
-  if (char === chars.length) {
-    complete();
-    return;
+if (chars.length > 0) {
+  let timer = setInterval(onTick, 20);
+  
+  function onTick() {
+    const span = chars[char];
+    span.classList.add('_fade-up');
+    char++;
+    if (char === chars.length) {
+      complete();
+      return;
+    }
+  }
+  
+  function complete() {
+    clearInterval(timer);
+    subtitle.classList.add('_active');
   }
 }
 
-function complete() {
-  clearInterval(timer);
-  subtitle.classList.add('_active');
-}
-
-
-
-
-
-console.log(textToAnimate);
 
 //=================
 // Dynamic Adapt v.1
