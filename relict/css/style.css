@@ -3619,6 +3619,12 @@ textarea {
 
 .tariffs-table__option {
   display: flex;
+  padding-left: 13px;
+  transition: all 0.5s ease;
+}
+
+.tariffs-table__option:hover {
+  background-color: #e6faf5;
 }
 
 .tariffs-table__icons {

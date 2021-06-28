@@ -222,7 +222,10 @@ if (title) {
 //Tabs
 let tabs = document.querySelectorAll("._tabs");
 const tabSlider = document.querySelector(".tab-slider");
-const sliderWidth =  172;
+const tabSliderNav = document.querySelector(".tabs-block__nav");
+const sliderWidth =  tabSliderNav.offsetWidth / 2 - 5;
+tabSlider.style.width =  sliderWidth + 'px';
+console.log(sliderWidth);
 for (let index = 0; index < tabs.length; index++) {
     let tab = tabs[index];
     let tabs_items = tab.querySelectorAll("._tabs-item");
