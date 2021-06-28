@@ -223,8 +223,12 @@ if (title) {
 let tabs = document.querySelectorAll("._tabs");
 const tabSlider = document.querySelector(".tab-slider");
 const tabSliderNav = document.querySelector(".tabs-block__nav");
-const sliderWidth =  tabSliderNav.offsetWidth / 2 - 5;
-tabSlider.style.width =  sliderWidth + 'px';
+let sliderWidth;
+if (tabSlider && tabSliderNav) {
+    sliderWidth =  tabSliderNav.offsetWidth / 2 - 5;
+    tabSlider.style.width =  sliderWidth + 'px';
+}
+
 console.log(sliderWidth);
 for (let index = 0; index < tabs.length; index++) {
     let tab = tabs[index];
