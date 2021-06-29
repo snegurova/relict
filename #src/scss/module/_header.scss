@@ -55,6 +55,7 @@
     justify-content: space-between;
     list-style: none;
     padding: 0;
+    margin-left: 95px;
     @media screen and (max-width: 992px) {
       flex-direction: column;
     }
@@ -68,6 +69,7 @@
     }
     li {
       position: relative;
+      flex-shrink: 0;
       &:hover {
         a {
           color: $dark-background-color;
