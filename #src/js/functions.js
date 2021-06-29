@@ -752,14 +752,20 @@ const changeTabsHeaderBorder = (elem) => {
     const shareCancelButton = document.querySelector('.blog-article-post__cancel');
     const shareWrapper = document.querySelector('.blog-article-post__distribute');
     const shareBody = document.querySelector('.blog-article-post__distribute-body');
+    let shareBodyHeight, shareWrapperHeight;
     let menuIsOpen = false;
 
-    if (shareWrapper) shareWrapper.style.height = `${shareWrapper.offsetHeight}px`;
+    if (shareWrapper) {
+        shareWrapperHeight = shareWrapper.offsetHeight;
+        shareWrapper.style.height = `${shareWrapper.offsetHeight}px`;
+    }
+    if (shareBody) shareBodyHeight = shareBody.offsetHeight;
 
     const openMenu = () => {
         if (!menuIsOpen) {
             shareBody.classList.add('blog-article-post__distribute-body_active');
             shareHeader.classList.add('blog-article-post__share_disabled');
+            shareWrapper.style.height = `${shareBodyHeight}px`;
             menuIsOpen = !menuIsOpen;
         }
     }
@@ -768,6 +774,7 @@ const changeTabsHeaderBorder = (elem) => {
         if (menuIsOpen) {
             shareBody.classList.remove('blog-article-post__distribute-body_active')
             shareHeader.classList.remove('blog-article-post__share_disabled');
+            shareWrapper.style.height = `${shareWrapperHeight}px`;
             menuIsOpen = !menuIsOpen;
         }
     }
