@@ -11263,17 +11263,6 @@ function select_actions(original, select) {
 				select.querySelector('.select__value').innerHTML = '<span>' + select_option_text + '</span>';
 				original.value = select_option_value;
 				select_option.style.display = 'none';
-				jQuery.ajax({
-					type: 'POST',
-					url: original.value,
-					dataType: 'HTML',
-					success: function (data) {
-						jQuery( '.load-more-holder'  ).html( data ).animate({opacity:1});
-					},
-					beforeSend: function(data){
-						jQuery( '.load-more-holder' ).animate({opacity:0});
-					}
-				});
 			}
 		});
 	}
