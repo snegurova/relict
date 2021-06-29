@@ -36,8 +36,13 @@
 }
 
 .promo .container {
-  transform: scale(1.2);
   transition: all 1s ease;
+  @media screen and (min-width: 1473px) {
+    transform: scale(1.1);
+  }
+  @media screen and (max-width: 1473px) {
+    transform: translateY(-30px);
+  }
 }
 .promo__slogan {
   transition: opacity 1s ease, visibility 1s ease;
@@ -62,6 +67,11 @@
     visibility: visible;
   }
   &.promo .container {
-    transform: scale(1);
+    @media screen and (min-width: 1473px) {
+      transform: scale(1);
+    }
+    @media screen and (max-width: 1473px) {
+      transform: translateY(0px);
+    }
   }
 }
