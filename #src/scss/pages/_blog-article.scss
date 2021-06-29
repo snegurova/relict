@@ -169,6 +169,7 @@
   &__distribute {
     position: relative;
     height: auto;
+    transition: .6s;
 
     &-body {
       position: absolute;
@@ -178,7 +179,7 @@
       width: 100%;
       top: 0;
       left: 0;
-      transition: .6s;
+      transition: .4s;
 
       &_active {
         visibility: visible;

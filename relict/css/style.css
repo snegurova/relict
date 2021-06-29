@@ -916,8 +916,19 @@ body._touch .header__nav-list > li._active .menu__sub-list {
 }
 
 .promo .container {
-  transform: scale(1.2);
   transition: all 1s ease;
+}
+
+@media screen and (min-width: 1473px) {
+  .promo .container {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 1473px) {
+  .promo .container {
+    transform: translateY(-30px);
+  }
 }
 
 .promo__slogan {
@@ -945,8 +956,16 @@ body._touch .header__nav-list > li._active .menu__sub-list {
   visibility: visible;
 }
 
-._active.promo .container {
-  transform: scale(1);
+@media screen and (min-width: 1473px) {
+  ._active.promo .container {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1473px) {
+  ._active.promo .container {
+    transform: translateY(0px);
+  }
 }
 
 .swiper-scrollbar {
@@ -2136,7 +2155,16 @@ textarea {
 }
 
 .wrapper._loaded .svg.svg_top, .wrapper._loaded .svg.svg_bottom {
-  opacity: 1;
+  animation: fade-in 3s ease 0s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .svg {
@@ -2148,7 +2176,6 @@ textarea {
   left: calc(845px + (100vw - 1280px) / 2);
   width: calc(358px + 507 * (100vw - 320px) / (1240 - 320));
   height: calc(601px + 881 * (100vw - 320px) / (1240 - 320));
-  opacity: 0;
   transition: all 2s ease;
 }
 
@@ -2164,7 +2191,6 @@ textarea {
 .svg.svg_bottom {
   top: -355px;
   left: calc(935px + (100vw - 1280px) / 2);
-  opacity: 0;
   transition: all 2s ease;
 }
 
@@ -2668,7 +2694,7 @@ textarea {
 }
 
 .tabs-block__body {
-  width: 85%;
+  width: 100%;
 }
 
 .tabs-block__item-icon {
@@ -3162,6 +3188,7 @@ textarea {
 .blog-article-post__distribute {
   position: relative;
   height: auto;
+  transition: .6s;
 }
 
 .blog-article-post__distribute-body {
@@ -3172,7 +3199,7 @@ textarea {
   width: 100%;
   top: 0;
   left: 0;
-  transition: .6s;
+  transition: .4s;
 }
 
 .blog-article-post__distribute-body_active {
