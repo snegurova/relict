@@ -6,6 +6,6 @@
   }
 }
 .swiper-container-vertical>.swiper-scrollbar{position:absolute;right:3px;top:1%;z-index:50;width:5px;height:98%}
-.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:$primary-btn-color;border-radius:10px;left:0;top:0}
+.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:$primary-btn-color;border-radius:10px;left:0;top:0;cursor:grab;}
 .swiper-scrollbar-cursor-drag{cursor:move}
 .swiper-scrollbar-lock{display:none}
