@@ -1,3 +1,9 @@
+.wrapper._loaded {
+  .svg.svg_top, .svg.svg_bottom {
+    opacity: 1;
+  }
+}
+
 .svg {
   position: absolute;
   &.svg_top {
@@ -5,22 +11,21 @@
     left: calc(845px + (100vw - 1280px) / 2);
     width: calc(358px + 507 * (100vw - 320px) / (1240 - 320));
     height: calc(601px + 881 * (100vw - 320px) / (1240 - 320));
+    opacity: 0;
+    transition: all 2s ease;
     @media screen and (min-width: 1240px) {
       top: -1150px;
       left: calc(845px + (100vw - 1280px) / 2);
       width: 865px;
       height: 1452px;
     }
-    //width: 865px;
-    //height: 1452px;
-    //top: -468px;
-    //left: 161px;
-    //right: 366px;
   }
 
   &.svg_bottom {
     top: -355px;
     left: calc(935px + (100vw - 1280px) / 2);
+    opacity: 0;
+    transition: all 2s ease;
   }
   &__shapes, &__lines {
     position: absolute;
@@ -40,10 +45,6 @@
         top: -770px;
         right: -590px;
       }
-      //top: -920px
-      //right: -660px;
-      //top: -1040px;
-      //right: -790px; //calc(-790px + 130 * (100vw - 320px) / (1920 - 320))
     }
     .line__bottom {
       top: calc(-1226px + 120 * (100vw - 320px) / (1240 - 320));
