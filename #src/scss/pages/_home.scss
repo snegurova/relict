@@ -1,5 +1,13 @@
 .wrapper._loaded {
   .svg.svg_top, .svg.svg_bottom {
+    animation: fade-in 3s ease 0s;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
@@ -11,7 +19,7 @@
     left: calc(845px + (100vw - 1280px) / 2);
     width: calc(358px + 507 * (100vw - 320px) / (1240 - 320));
     height: calc(601px + 881 * (100vw - 320px) / (1240 - 320));
-    opacity: 0;
+    //opacity: 0;
     transition: all 2s ease;
     @media screen and (min-width: 1240px) {
       top: -1150px;
@@ -24,7 +32,7 @@
   &.svg_bottom {
     top: -355px;
     left: calc(935px + (100vw - 1280px) / 2);
-    opacity: 0;
+    //opacity: 0;
     transition: all 2s ease;
   }
   &__shapes, &__lines {
