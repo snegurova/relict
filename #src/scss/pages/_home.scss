@@ -89,6 +89,7 @@
     @media screen and (min-width: 1280px) {
       font-size: 6rem;
     }
+
     .heading__accent {
       display: block;
     }
@@ -718,7 +719,7 @@
 .svg__lines.home-contact {
   opacity: 1;
   visibility: visible;
-
+  z-index: -1;
   .line__top {
     top: calc(2870px - -80 * (100vw - 1280px) / (2560 - 1280));
     right: calc(-690px - 120 * (100vw - 1280px) / (2560 - 1280));
@@ -753,4 +754,32 @@
       display: none;
     }
   }
+}
+
+.svg__shapes.home-contact {
+  transform: scaleX(-1);
+  .svg {
+    &.svg_top {
+      opacity: 1;
+      top: calc(3240px - 430 * (100vw - 1440px) / (2560 - 1440));
+      left: calc(1090px - -960 * (100vw - 1440px) / (2560 - 1440));
+      width: calc(900px + 600 * (100vw - 1440px) / (2560 - 1440));
+      height: calc(900px + 600 * (100vw - 1440px) / (2560 - 1440));
+      right: unset;
+      @media screen and (max-width: 1330px) {
+        display: none;
+      }
+    }
+
+    &.svg_bottom {
+      top: calc(3750px - 70 * (100vw - 1440px) / (2560 - 1440));
+      left: calc(1140px - -1000 * (100vw - 1440px) / (2560 - 1440));
+      width: calc(618px + 426 * (100vw - 1440px) / (2560 - 1440));
+      height: calc(1127px + 575 * (100vw - 1440px) / (2560 - 1440));
+      @media screen and (max-width: 1330px) {
+        display: none;
+      }
+    }
+  }
+
 }
