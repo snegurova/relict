@@ -17,25 +17,31 @@
   position: absolute;
 
   &.svg_top {
-    top: -1150px;
-    left: calc(845px + (100vw - 1280px) / 2);
-    width: calc(358px + 507 * (100vw - 320px) / (1240 - 320));
-    height: calc(601px + 881 * (100vw - 320px) / (1240 - 320));
-    //opacity: 0;
+    top: calc(-469px - 1230 * (100vw - 320px) / (2560 - 320));
+    right: calc(-202px - 350 * (100vw - 320px) / (2560 - 320));
+    width: calc(358px + 1012 * (100vw - 320px) / (2560 - 320));
+    height: calc(601px + 1700 * (100vw - 320px) / (2560 - 320));
     transition: all 2s ease;
-    @media screen and (min-width: 1240px) {
-      top: -1150px;
-      left: calc(845px + (100vw - 1280px) / 2);
-      width: 865px;
-      height: 1452px;
+    @media screen and (min-width: 1440px) {
+      top: calc(-1084px - 430 * (100vw - 1440px) / (2560 - 1440));
+      right: calc(-377px - 160 * (100vw - 1440px) / (2560 - 1440));
+      width: calc(864px + 300 * (100vw - 1440px) / (2560 - 1440));
+      height: calc(1461px + 500 * (100vw - 1440px) / (2560 - 1440));
     }
   }
 
   &.svg_bottom {
-    top: -355px;
-    left: calc(935px + (100vw - 1280px) / 2);
-    //opacity: 0;
+    top: calc(-142px - 280 * (100vw - 320px) / (2560 - 320));
+    right: calc(-270px - 520 * (100vw - 320px) / (2560 - 320));
+    width: calc(387px + 1094 * (100vw - 320px) / (2560 - 320));
+    height: calc(705px + 1994 * (100vw - 320px) / (2560 - 320));
     transition: all 2s ease;
+    @media screen and (min-width: 1440px) {
+      top: calc(-282px - 190 * (100vw - 1440px) / (2560 - 1440));
+      right: calc(-530px - 240 * (100vw - 1440px) / (2560 - 1440));
+      width: calc(934px + 300 * (100vw - 1440px) / (2560 - 1440));
+      height: calc(1702px + 550 * (100vw - 1440px) / (2560 - 1440));
+    }
   }
 
   &__shapes, &__lines {
@@ -80,7 +86,9 @@
     line-height: 1.1;
     text-transform: none;
     text-align: left;
-
+    @media screen and (min-width: 1280px) {
+      font-size: 6rem;
+    }
     .heading__accent {
       display: block;
     }
