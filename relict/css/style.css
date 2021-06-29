@@ -2509,6 +2509,7 @@ textarea {
 .promo__advantages {
   padding-top: 61px;
   position: relative;
+  z-index: 3;
   flex-grow: 1;
   display: flex;
   justify-content: center;
