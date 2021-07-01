@@ -20,7 +20,7 @@
     height: 100%;
     background-color: $primary-btn-color;
     border: 1px solid $primary-btn-color;
-    padding: 12px 47px;
+    padding: 18px 52px;
     border-radius: 15px;
     transition: all 0.3s ease 0s;
   }
@@ -53,6 +53,16 @@
     padding: 12px 47px;
     background-color: $secondary-btn-color;
     border: 1px solid $secondary-btn-color;
+    color: #a9c2db;
+
+    @media screen and (max-width: 560px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 40px;
+      font-weight: 600;
+    }
+
     &:hover {
       color: $secondary-btn-color;
       background-color: $background-color;
@@ -62,11 +72,16 @@
     }
   }
   &.btn_submit-full {
-    padding: 12px 47px;
+    padding: 18px 52px;
     background-color: $primary-btn-color;
     border: 1px solid $primary-btn-color;
     width: 100%;
     margin-top: 70px;
+
+    @media screen and (max-width: 560px) {
+      margin-top: 40px;
+    }
+
     &:hover {
       color: $primary-btn-color;
       background-color: $background-color;
@@ -76,6 +91,7 @@
     }
   }
 }
+
 .btn_log-in {
   border: none;
   background-color: transparent;
@@ -84,6 +100,13 @@
   margin-right: 45px;
   color: $header-font-color;
   transition: all 0.3s ease;
+
+  @media screen and (max-width: 560px){
+    font-size: 1.5rem;
+    padding: 10px 14px 10px 0 ;
+    margin-right: 15px;
+  }
+
   &:hover {
     color: $secondary-btn-color;
   }

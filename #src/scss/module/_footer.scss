@@ -31,10 +31,15 @@
     @media screen and (max-width: 960px) {
       flex-direction: column;
       align-items: flex-start;
+      padding: 0 30px 0 0;
     }
 
   }
   &__bottom {
+    @media screen and (max-width: 630px) {
+      background-color: #e3e7ef;
+    }
+
     .footer__wrapper {
       @media screen and (max-width: 630px) {
         padding: 0;
@@ -52,6 +57,13 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  &__top-left {
+    @media screen and (max-width: 560px) {
+      width: 100%;
+    }
+  }
+
   .footer__top-right {
     @media screen and (max-width: 960px) {
       width: 100%;
@@ -59,6 +71,7 @@
     }
     @media screen and (max-width: 630px) {
       display: block;
+      padding-top: 10px;
       column-count: 2;
       li:not(:last-child) {
         margin-bottom: 17px;
@@ -66,11 +79,17 @@
     }
   }
   &__bottom {
-    padding: 20px 0;
     @media screen and (max-width: 630px) {
-      //background-color: #e3e7ef;
-      padding: 25px 0;
+      background-color: #010B20;
+      padding: 15px 0 25px;
     }
+
+    &.footer_light {
+      @media screen and (max-width: 630px) {
+        background-color: #E3E7EF;
+      }
+    }
+
     .container {
       @media screen and (max-width: 992px) {
         flex-wrap: wrap;
@@ -87,24 +106,49 @@
       display: none;
     }
   }
+
   .footer__nav {
     padding-bottom: 25px;
   }
+
   .footer__logo-list {
     align-items: start;
+
+    @media screen and (max-width: 560px) {
+      width: 100%;
+      justify-content: flex-start;
+    }
   }
+
   &__logo-list-item {
     &:not(:last-child) {
       margin-right: 30px;
+
+      @media screen and (max-width: 560px) {
+        width: 50%;
+        margin-right: 8px;
+      }
+    }
+
+    &_mobile-off {
+      @media screen and (max-width: 560px) {
+        display: none;
+      }
     }
   }
+
   &__nav-link, &__logo-link {
     margin-right: 35px;
     text-decoration: none;
     transition: color 0.5s;
+    font-weight: 600;
     img {
       display: block;
       width: 100%;
+
+      @media screen and (max-width: 560px) {
+        width: auto;
+      }
     }
   }
 
@@ -118,6 +162,16 @@
 
   &__logo-link {
     color: $accent-color;
+
+    &_mobile-on {
+      display: none;
+      width: 134px;
+      margin: 0 auto 24px;
+
+      @media screen and (max-width: 560px) {
+        display: block;
+      }
+    }
 
     &:hover {
       color: $footer-font-color;
@@ -157,7 +211,6 @@
         width: 100%;
         justify-content: space-between;
       }
-
     }
   }
   &__left {
@@ -233,6 +286,7 @@
 .footer_light {
   background-color: $footer-background-color-light;
   color: $footer-font-color-light;
+
   .footer__nav-link {
     color: $footer-font-color-light;
     &:hover {

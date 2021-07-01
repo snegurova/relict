@@ -30,10 +30,27 @@
     border-radius: 25px;
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
+    transition: .1s;
+
+    &_menu-open {
+      background-color: rgba(0, 0, 0, 0);
+      backdrop-filter: none;
+      opacity: 1;
+    }
   }
   &__right {
     display: flex;
     z-index: 1;
+
+    @media screen and (max-width: 560px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 20px 18px;
+      background-color: #FFFFFF;
+      border-radius: 20px;
+    }
   }
   .logo {
     display: block;
@@ -55,9 +72,17 @@
     justify-content: space-between;
     list-style: none;
     padding: 0;
+    margin-left: 95px;
     @media screen and (max-width: 992px) {
       flex-direction: column;
     }
+
+    & > li {
+      &:not(:last-child) {
+        margin-bottom: 14px;
+      }
+    }
+
     a {
       position: relative;
       text-decoration: none;
@@ -68,6 +93,8 @@
     }
     li {
       position: relative;
+      flex-shrink: 0;
+
       &:hover {
         a {
           color: $dark-background-color;
@@ -128,7 +155,7 @@ Submenu
     padding: 0;
     min-width: 115px;
     li {
-      padding: 12px 15px 9px;
+      padding: 12px 0 9px;
       a.menu__sub-link {
         margin: 0;
         color: $header-font-color;
@@ -278,13 +305,15 @@ body._touch .header__nav-list > li._active .menu__sub-list {
 
   .header .menu__body {
     position: fixed;
+    visibility: hidden;
+    opacity: 0;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100%;
     height: 100%;
     backdrop-filter: blur(100px);
     padding: 100px 30px 30px 30px;
-    transition: left 0.3s ease 0s;
+    transition: 0.4s ease 0s;
     overflow: auto;
     border-radius: 15px 15px 0 0;
     @media screen and (max-width: 992px) {
@@ -297,7 +326,8 @@ body._touch .header__nav-list > li._active .menu__sub-list {
     }
   }
   .menu__body._active {
-    left: 0;
+    visibility: visible;
+    opacity: 1;
   }
 
   .menu__body::before {
