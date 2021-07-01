@@ -5,6 +5,7 @@
 @@include('forms.js', {})
 @@include('radio.js', {})
 @@include('animations.js', {})
+@@include('parallax.js', {})
 @@include('dynamicAdapt.js', {})
 
 function testWebP(callback) {

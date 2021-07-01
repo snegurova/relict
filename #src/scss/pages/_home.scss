@@ -86,6 +86,10 @@
     line-height: 1.1;
     text-transform: none;
     text-align: left;
+    @media screen and (min-width: 1280px) {
+      font-size: 6rem;
+    }
+
 
     @media screen and (max-width: 560px) {
       padding-top: 14px;
@@ -102,6 +106,7 @@
 
   &__subtitle {
     max-width: 425px;
+    font-size: calc(1rem + 4 * (100vw - 320px) / (1280 - 320));
     font-size: calc(1rem + 4 * (100vw - 320px) / (1280 - 320));
     font-weight: 400;
     line-height: 1.4;
@@ -345,6 +350,11 @@
     @media screen and (min-width: 1281px) {
       font-size: 1.25rem;
     }
+    font-size: calc(1rem + 4 * (100vw - 320px) / (1280 - 320));
+    line-height: 1.4;
+    @media screen and (min-width: 1281px) {
+      font-size: 1.25rem;
+    }
     @media screen and (max-width: 1130px) {
       margin-bottom: 35px;
     }
@@ -353,6 +363,7 @@
   &__advantages {
     padding-top: 61px;
     position: relative;
+    z-index: 3;
     flex-grow: 1;
     display: flex;
     justify-content: center;
