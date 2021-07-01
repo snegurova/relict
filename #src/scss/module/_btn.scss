@@ -50,15 +50,15 @@
     }
   }
   &.btn_secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 12px 47px;
     background-color: $secondary-btn-color;
     border: 1px solid $secondary-btn-color;
     color: #a9c2db;
 
-    @media screen and (max-width: 560px) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    @media screen and (max-width: 992px) {
       padding: 12px 40px;
       font-weight: 600;
     }

@@ -28,13 +28,13 @@ textarea {
   width: 400px;
   max-width: 100%;
   display: block;
-  border: none;
   border-radius: 19px;
   padding: 18px 20px;
   color: $main-font-color;
   font-family: 'Dosis', sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
+  border: 1px solid #f7f8fc;
   background-color: #f7f8fc;
   transition: all 0.3s ease;
   &::placeholder {
@@ -139,14 +139,13 @@ textarea {
   line-height: 1;
   max-width: 100%;
   display: block;
-  border: none;
+  border: 1px solid #f7f8fc;
   border-radius: 19px;
   color: #030F29;
   font-family: 'Dosis', sans-serif;
   font-size: 1rem;
   font-weight: 500;
   background-color: #f7f8fc;
-  //border: 1px solid #f7f8fc;
   transition: all 0.3s ease;
   margin-top: 8px;
   // .select__item
