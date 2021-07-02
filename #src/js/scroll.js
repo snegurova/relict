@@ -53,9 +53,9 @@ function scroll_scroll() {
 			let scr_item_height = scr_item.offsetHeight;
 
 
-			let scr_item_point = window.innerHeight - (scr_item_height / 2);
+			let scr_item_point = window.innerHeight - (scr_item_height / 4);
 			if (window.innerHeight > scr_item_height) {
-				scr_item_point = window.innerHeight - scr_item_height / 20;
+				scr_item_point = window.innerHeight - scr_item_height / 4;
 			}
 
 			if ((src_value > scr_item_offset - scr_item_point) && src_value < (scr_item_offset)) {
