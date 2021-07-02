@@ -151,8 +151,9 @@ button {
 @media screen and (max-width: 560px) {
   .header__right {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    max-width: 300px;
     width: 100%;
     padding: 20px 18px;
     background-color: #FFFFFF;
@@ -186,6 +187,7 @@ button {
 @media screen and (max-width: 992px) {
   .header .header__nav-list {
     flex-direction: column;
+    margin-left: 0;
   }
 }
 
@@ -445,14 +447,8 @@ body._touch .header__nav-list > li._active .menu__sub-list {
 @media screen and (max-width: 992px) and (max-width: 992px) {
   .header .menu__body {
     flex-direction: column;
-    align-items: start;
-    padding-left: 100px;
-  }
-}
-
-@media screen and (max-width: 992px) and (max-width: 400px) {
-  .header .menu__body {
-    padding-left: 29px;
+    align-items: center;
+    padding: 100px 18px 30px;
   }
 }
 
@@ -631,7 +627,7 @@ body._touch .header__nav-list > li._active .menu__sub-list {
   transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 992px) {
   .btn_log-in {
     font-size: 1.5rem;
     padding: 10px 14px 10px 0;
