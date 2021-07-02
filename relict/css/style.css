@@ -823,6 +823,10 @@ body._touch .header__nav-list > li._active .menu__sub-list {
   padding: 33px 44px;
 }
 
+.blog-post__card:hover .blog-post__title {
+  color: #FF3B59;
+}
+
 .blog-post__card_modifier {
   margin-top: 0;
   background-color: #FFFFFF;
@@ -891,6 +895,7 @@ body._touch .header__nav-list > li._active .menu__sub-list {
   font-size: 1.25rem;
   font-weight: 700;
   grid-column: 1 / 3;
+  transition: all 0.5s ease;
 }
 
 @media screen and (max-width: 560px) {
