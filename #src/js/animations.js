@@ -18,7 +18,7 @@ lettersSetsToAnimate.forEach((set, i) => {
 
 let char = 0;
 const chars = document.querySelectorAll('._animated-letter');
-const subtitle = document.querySelector('._after-letters-animation');
+const animateAfterElements = document.querySelectorAll('._after-letters-animation');
 
 if (chars.length > 0) {
   let timer = setInterval(onTick, 20);
@@ -35,7 +35,7 @@ if (chars.length > 0) {
   
   function complete() {
     clearInterval(timer);
-    subtitle.classList.add('_active');
+    animateAfterElements.forEach(el => el.classList.add('_active'));
   }
 }
 
