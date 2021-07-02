@@ -2342,8 +2342,8 @@ textarea {
 }
 
 .svg__lines .line__top {
-  top: calc(-599px - 171 * (100vw - 320px) / (1440 - 320));
-  right: calc(-632px + 42 * (100vw - 320px) / (1440 - 320));
+  top: calc(-870px + 100 * (100vw - 320px) / (1440 - 320));
+  right: calc(-760px + 170 * (100vw - 320px) / (1440 - 320));
 }
 
 @media screen and (min-width: 1440px) {
@@ -3194,7 +3194,7 @@ textarea {
 
 @media screen and (max-width: 1130px) {
   .svg__lines.home-contact .line__top {
-    top: calc(3030px - 40 * (100vw - 320px) / (1130 - 320));
+    top: calc(2780px - -280 * (100vw - 320px) / (1130 - 320));
     right: calc(-650px - 20 * (100vw - 320px) / (1130 - 320));
     width: calc(782px + 212 * (100vw - 320px) / (1130 - 320));
     height: calc(1142px + 317 * (100vw - 320px) / (1130 - 320));
@@ -3216,8 +3216,8 @@ textarea {
 
 @media screen and (max-width: 1130px) {
   .svg__lines_right.home-prices .line__top {
-    top: calc(2360px - 510 * (100vw - 560px) / (1130 - 560));
-    left: calc(-690px - 280 * (100vw - 560px) / (1130 - 560));
+    top: calc(2063px - 150 * (100vw - 560px) / (1130 - 560));
+    left: calc(-650px - 340 * (100vw - 560px) / (1130 - 560));
     width: calc(782px + 392 * (100vw - 560px) / (1130 - 560));
     height: calc(1142px + 457 * (100vw - 560px) / (1130 - 560));
   }
@@ -3225,7 +3225,7 @@ textarea {
 
 @media screen and (max-width: 560px) {
   .svg__lines_right.home-prices .line__top {
-    display: none;
+    left: calc(-690px - 280 * (100vw - 320px) / (560 - 320));
   }
 }
 
@@ -3259,6 +3259,10 @@ textarea {
   .svg__shapes.home-contact .svg.svg_bottom {
     display: none;
   }
+}
+
+.hide-on-mobile {
+  display: none;
 }
 
 .our-blog {
