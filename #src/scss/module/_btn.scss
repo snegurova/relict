@@ -65,7 +65,7 @@
 
     &:hover {
       color: $secondary-btn-color;
-      background-color: $background-color;
+      background-color: transparent;
     }
     &::after {
       display: none;

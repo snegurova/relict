@@ -591,7 +591,7 @@ body._touch .header__nav-list > li._active .menu__sub-list {
 
 .btn.btn_secondary:hover {
   color: #0C1A38;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .btn.btn_secondary::after {
