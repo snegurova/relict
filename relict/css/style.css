@@ -4405,6 +4405,15 @@ textarea {
   background-color: rgba(0, 0, 0, 0);
 }
 
+.mc4wp-form-fields {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
 * {
   box-sizing: border-box;
 }
