@@ -270,7 +270,7 @@ Submenu
 .header__nav-list .menu__sub-list {
   position: absolute;
   top: 100%;
-  left: -30%;
+  left: -15px;
   background-color: #fff;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
