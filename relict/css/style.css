@@ -3273,6 +3273,15 @@ textarea {
   display: none;
 }
 
+.ad-products__slide::before {
+  width: 40%;
+  left: 30%;
+}
+
+.ad-products__slide:hover::before {
+  opacity: 0.6;
+}
+
 .our-blog {
   padding: 35px 0 70px;
 }
