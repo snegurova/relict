@@ -3012,7 +3012,8 @@ textarea {
   margin-top: 17px;
   overflow: hidden;
   border-radius: 15px;
-  width: 85%;
+  max-width: 1068px;
+  width: 100%;
 }
 
 @media screen and (max-width: 560px) {
@@ -3101,7 +3102,7 @@ textarea {
 }
 
 .blog-posts__slider {
-  margin-left: calc((100vw - 1284px) / 2 + 109px);
+  margin-left: calc((100vw - 1077px) / 2);
 }
 
 @media screen and (max-width: 1125px) {

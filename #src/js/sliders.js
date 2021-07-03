@@ -108,6 +108,9 @@ const blogPostsSlider = new Swiper('.blog-posts__slider', {
     // when window width is >= 1090px
     1090: {
       slidesPerView: 2.4,
+    },
+    1440: {
+      slidesPerView: (window.innerWidth + 1077) / 1090,
     }
   }
 });
