@@ -78,6 +78,12 @@ button {
   display: block;
 }
 
+@media screen and (max-width: 816px) {
+  .line {
+    display: inline;
+  }
+}
+
 .swiper-container-fade.swiper-container-free-mode .swiper-slide {
   transition-timing-function: ease-out;
 }
@@ -4418,6 +4424,11 @@ textarea {
   width: 100%;
   flex-wrap: wrap;
   margin-top: 10px;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
+  border-color: #ffb900;
+  border-radius: 19px;
 }
 
 * {
