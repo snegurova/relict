@@ -35,7 +35,11 @@ if (chars.length > 0) {
   
   function complete() {
     clearInterval(timer);
-    animateAfterElements.forEach(el => el.classList.add('_active'));
+    // animateAfterElements.forEach(el => el.classList.add('_active'));
+    for (let i = 0; i < animateAfterElements.length; i++) {
+      const el = animateAfterElements[i];
+      el.classList.add('_active');
+    }
   }
 }
 
