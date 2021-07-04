@@ -194,7 +194,7 @@ button {
 }
 
 .header .header__nav-list > li:not(:last-child) {
-  margin-bottom: 14px;
+  margin-right: 14px;
 }
 
 .header .header__nav-list a {
