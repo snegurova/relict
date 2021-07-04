@@ -47,12 +47,19 @@ if (isMobile.any()) {
 // Burger
 const iconMenu = document.querySelector('.burger-menu__icon');
 const menuBody = document.querySelector('.menu__body');
-const menuHeader = document.querySelector('.header__blur')
+const menuHeader = document.querySelector('.header__blur');
+const submenu = document.querySelector('.menu__sub-list');
 if (iconMenu) {
     iconMenu.addEventListener("click", function (e) {
         document.body.classList.toggle('_lock');
         iconMenu.classList.toggle('_active');
         menuBody.classList.toggle('_active');
+        menuHeader.classList.toggle('header__blur_menu-open');
+    });
+}
+
+if (submenu) {
+    submenu.addEventListener("click", function (e) {
         menuHeader.classList.toggle('header__blur_menu-open');
     });
 }

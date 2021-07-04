@@ -47,12 +47,19 @@ if (isMobile.any()) {
 // Burger
 const iconMenu = document.querySelector('.burger-menu__icon');
 const menuBody = document.querySelector('.menu__body');
-const menuHeader = document.querySelector('.header__blur')
+const menuHeader = document.querySelector('.header__blur');
+const submenu = document.querySelector('.menu__sub-list');
 if (iconMenu) {
     iconMenu.addEventListener("click", function (e) {
         document.body.classList.toggle('_lock');
         iconMenu.classList.toggle('_active');
         menuBody.classList.toggle('_active');
+        menuHeader.classList.toggle('header__blur_menu-open');
+    });
+}
+
+if (submenu) {
+    submenu.addEventListener("click", function (e) {
         menuHeader.classList.toggle('header__blur_menu-open');
     });
 }
@@ -11263,6 +11270,17 @@ function select_actions(original, select) {
 				select.querySelector('.select__value').innerHTML = '<span>' + select_option_text + '</span>';
 				original.value = select_option_value;
 				select_option.style.display = 'none';
+				jQuery.ajax({
+					type: 'POST',
+					url: original.value,
+					dataType: 'HTML',
+					success: function (data) {
+						jQuery( '.load-more-holder'  ).html( data ).animate({opacity:1});
+					},
+					beforeSend: function(data){
+						jQuery( '.load-more-holder' ).animate({opacity:0});
+					}
+				});
 			}
 		});
 	}
