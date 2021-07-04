@@ -34,7 +34,7 @@ let { src, dest } = require('gulp'),
 	browsersync = require("browser-sync").create(),
 	fileinclude = require("gulp-file-include"),
 	del = require("del"),
-	scss = require("gulp-sass"),
+	scss = require('gulp-sass')(require('sass')),
 	autoprefixer = require("gulp-autoprefixer"),
 	group_media = require("gulp-group-css-media-queries"),
 	clean_css = require("gulp-clean-css"),
@@ -46,7 +46,7 @@ let { src, dest } = require('gulp'),
 	webpcss = require("gulp-webpcss"),
 	svgSprite = require('gulp-svg-sprite'),
 	// ttf2woff = require('gulp-ttf2woff'),
-	// ttf2woff2 = require('gulp-ttf2woff2'),
+	ttf2woff2 = require('gulp-ttf2woff2'),
 	fonter = require('gulp-fonter'),
 	newer = require('gulp-newer'),
 	sourcemaps = require('gulp-sourcemaps');
@@ -64,7 +64,7 @@ function html() {
 	return src(path.src.html)
 		.pipe(fileinclude())
 		.pipe(webphtml())
-		// .pipe(replace('href=\"/', 'href=\"/relict/relict/'))
+		.pipe(replace('href=\"/', 'href=\"/relict/relict/'))
 		.pipe(dest(path.build.html))
 		.pipe(browsersync.stream())
 }
@@ -76,7 +76,7 @@ function css() {
 				outputStyle: "expanded"
 			})
 		)
-		/*.pipe(
+		.pipe(
 			group_media()
 		)
 		.pipe(
@@ -84,7 +84,7 @@ function css() {
 				overrideBrowserslist: ["last 5 versions"],
 				cascade: true
 			})
-		)*/
+		)
 		.pipe(webpcss(
 			{
 				webpClass: "._webp",
@@ -93,22 +93,22 @@ function css() {
 		))
 		.pipe(sourcemaps.write('../maps'))
 		.pipe(dest(path.build.css))
-		/*.pipe(clean_css())
+		.pipe(clean_css())
 		.pipe(
 			rename({
 				extname: ".min.css"
 			})
 		)
-		.pipe(dest(path.build.css))*/
+		.pipe(dest(path.build.css))
 		.pipe(browsersync.stream())
 }
 function js() {
 	return src(path.src.js)
-		.pipe(sourcemaps.init())
+		// .pipe(sourcemaps.init())
 		.pipe(fileinclude())
-		.pipe(sourcemaps.write('../maps'))
+		// .pipe(sourcemaps.write('../maps'))
 		.pipe(dest(path.build.js))
-		/*.pipe(
+		.pipe(
 			uglify()
 		)
 		.on('error', function (err) { console.log(err.toString()); this.emit('end'); })
@@ -117,7 +117,7 @@ function js() {
 				extname: ".min.js"
 			})
 		)
-		.pipe(dest(path.build.js))*/
+		.pipe(dest(path.build.js))
 		.pipe(browsersync.stream())
 }
 function images() {
@@ -150,19 +150,22 @@ function images() {
 }
 function fonts() {
 	src(path.src.fonts)
-		// .pipe(ttf2woff())
+		.pipe(ttf2woff2())
 		.pipe(dest(path.build.fonts));
-	return src(path.src.fonts)
-		// .pipe(ttf2woff2())
-		.pipe(dest(path.build.fonts));
+	// return src(path.src.fonts)
+	// 	.pipe(dest(path.build.fonts));
 };
-// gulp.task('otf2ttf', function () {
-// 	return src([source_folder + '/fonts/*.otf'])
-// 		.pipe(fonter({
-// 			formats: ['ttf']
-// 		}))
-// 		.pipe(dest(source_folder + '/fonts/'));
-// })
+gulp.task('otf2ttf', function () {
+	return src([source_folder + '/fonts/*.otf'])
+		.pipe(fonter({
+			formats: ['ttf']
+		}))
+		.pipe(dest(source_folder + '/fonts/'));
+})
+// gulp.task('fonts:copy', function() {
+// 	gulp.src('./#src/fonts/**/*.{eot,svg,ttf,woff,woff2}')
+// 		.pipe(gulp.dest(path.build.fonts));
+// });
 gulp.task('svgSprite', function () {
 	return gulp.src([source_folder + '/iconsprite/*.svg'])
 		.pipe(svgSprite({

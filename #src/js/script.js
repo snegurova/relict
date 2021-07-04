@@ -1,4 +1,3 @@
-@@include('libs/inputmask.min.js', {})
 @@include('functions.js', {})
 @@include('sliders.js', {})
 @@include('scroll.js', {})
@@ -6,7 +5,6 @@
 @@include('radio.js', {})
 @@include('animations.js', {})
 @@include('parallax.js', {})
-@@include('dynamicAdapt.js', {})
 
 function testWebP(callback) {
 	var webP = new Image();
