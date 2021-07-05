@@ -321,18 +321,20 @@
     transform: scaleX(-1);
   }
   &.svg__shapes_right-solution {
-    .svg {
+    .svg.svg {
       &_top {
-        top: calc(465px - 440 * (100vw - 1280px) / (2560 - 1280));
-        left: calc(-340px - 200 * (100vw - 1280px) / (2560 - 1280));
-        width: calc(528px + 528 * (100vw - 1280px) / (2560 - 1280));
-        height: calc(530px + 530 * (100vw - 1280px) / (2560 - 1280));
+        top: calc(465px - 280 * (100vw - 1280px)/ (2560 - 1280));
+        left: calc(-340px - 120 * (100vw - 1280px)/ (2560 - 1280));
+        width: calc(528px + 264 * (100vw - 1280px)/ (2560 - 1280));
+        height: calc(530px + 265 * (100vw - 1280px)/ (2560 - 1280));
+        transition: unset;
       }
       &_bottom {
         top: calc(800px - 90 * (100vw - 1280px) / (2560 - 1280));
         left: calc(-180px - 30 * (100vw - 1280px) / (2560 - 1280));
-        width: calc(346px + 346 * (100vw - 1280px) / (2560 - 1280));
-        height: calc(631px + 631 * (100vw - 1280px) / (2560 - 1280));
+        width: calc(346px + 173 * (100vw - 1280px) / (2560 - 1280));
+        height: calc(631px + 215 * (100vw - 1280px) / (2560 - 1280));
+        transition: unset;
       }
       @media screen and (max-width: 900px) {
         display: none;
@@ -342,18 +344,20 @@
 }
 
 .svg__shapes_bottom-solution {
-  .svg {
+  .svg.svg {
     &_top {
-      top: calc(785px - 860 * (100vw - 1280px) / (2560 - 1280));
-      left: calc(1100px - -860 * (100vw - 1280px) / (2560 - 1280));
-      width: calc(664px + 664 * (100vw - 1280px) / (2560 - 1280));
-      height: calc(666px + 666 * (100vw - 1280px) / (2560 - 1280));
+      top: calc(785px - 300 * (100vw - 1280px)/ (2560 - 1280));
+      left: calc(1100px - -1070 * (100vw - 1280px)/ (2560 - 1280));
+      width: calc(664px + 332 * (100vw - 1280px)/ (2560 - 1280));
+      height: calc(666px + 333 * (100vw - 1280px)/ (2560 - 1280));
+      transition: unset;
     }
     &_bottom {
-      top: calc(1210px - 410 * (100vw - 1280px) / (2560 - 1280));
-      left: calc(1120px - -860 * (100vw - 1280px) / (2560 - 1280));
-      width: calc(436px + 436 * (100vw - 1280px) / (2560 - 1280));
-      height: calc(795px + 795 * (100vw - 1280px) / (2560 - 1280));
+      top: calc(1210px - 120 * (100vw - 1280px)/ (2560 - 1280));
+      left: calc(1120px - -1100 * (100vw - 1280px)/ (2560 - 1280));
+      width: calc(436px + 218 * (100vw - 1280px)/ (2560 - 1280));
+      height: calc(795px + 388 * (100vw - 1280px)/ (2560 - 1280));
+      transition: unset;
     }
     @media screen and (max-width: 900px) {
       display: none;
