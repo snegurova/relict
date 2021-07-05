@@ -3525,11 +3525,14 @@ textarea {
   z-index: -1;
 }
 
-.svg__lines_right-solution .line__top {
-  top: calc(-1490px - 1350 * (100vw - 1280px) / (2560 - 1280));
-  left: calc(-1135px - 820 * (100vw - 1280px) / (2560 - 1280));
-  width: calc(1491px + 1538 * (100vw - 1280px) / (2560 - 1280));
-  height: calc(2243px + 1890 * (100vw - 1280px) / (2560 - 1280));
+.svg__lines_right-solution .svg.line__top {
+  top: calc(-847px - 200 * (100vw - 1440px)/ (2560 - 1440));
+  left: calc(-995px - 310 * (100vw - 1440px)/ (2560 - 1440));
+  width: calc(1331px + 333 * (100vw - 1440px)/ (2560 - 1440));
+  height: calc(1914px + 485 * (100vw - 1440px)/ (2560 - 1440));
+  -webkit-transform: rotate(-144deg);
+      -ms-transform: rotate(-144deg);
+          transform: rotate(-144deg);
 }
 
 .svg__lines_right-solution .line__bottom {
@@ -4131,6 +4134,15 @@ img {
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .svg__lines_right-solution .svg.line__top {
+    top: calc(-470px - 197 * (100vw - 560px)/ (1440 - 560));
+    left: calc(-630px - 245 * (100vw - 560px)/ (1440 - 560));
+    width: calc(782px + 392 * (100vw - 560px)/ (1440 - 560));
+    height: calc(1142px + 457 * (100vw - 560px)/ (1440 - 560));
+  }
+}
+
 @media screen and (max-width: 1340px) {
   .container {
     padding-left: 30px;
@@ -4607,10 +4619,6 @@ img {
   }
 
   .svg__shapes_right.svg__shapes_right-contact-us .svg {
-    display: none;
-  }
-
-  .svg__lines_right-solution .line__top {
     display: none;
   }
 
@@ -5143,6 +5151,10 @@ img {
   .services__title {
     margin-bottom: 47px;
     font-size: 1.5rem;
+  }
+
+  .svg__lines_right-solution .svg.line__top {
+    left: calc(-690px - 280 * (100vw - 320px) / (560 - 320));
   }
 
   .main {
